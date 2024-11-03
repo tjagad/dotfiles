@@ -1,0 +1,17 @@
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+export CHRONOS_BASE=/etc/chronos
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export PATH=/opt/go/bin:$PATH
+
+unset PROMPT_COMMAND
+
+alias ls='exa'
+alias ll='exa -l'
+
+eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
+eval "$(starship init bash)"
+
+export STARSHIP_CONFIG=$CHRONOS_BASE/config/starship/starship.toml
