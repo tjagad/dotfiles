@@ -1,0 +1,39 @@
+session_name: mgmt
+windows:
+  - window_name:  rsh
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad
+  - window_name:  sh
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad
+    focus: "true"
+  - window_name:  git
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad
+  - window_name:  mail
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad
+  - window_name: 󰭹 irc
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command: tmux-irssi
+    start_directory: /home/tjagad
+  - window_name:  dl
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad
