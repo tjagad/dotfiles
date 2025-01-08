@@ -39,6 +39,4 @@ return {
   { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
-
-  --  { import = "astrocommunity.utility.noice-nvim" },
 }
