@@ -1,6 +1,7 @@
 export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
 export CHRONOS_BASE=/etc/chronos
+export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH=$HOME/.local/bin:$PATH
