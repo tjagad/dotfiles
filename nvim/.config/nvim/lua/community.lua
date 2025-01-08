@@ -18,6 +18,8 @@ return {
 
   { import = "astrocommunity.colorscheme.catppuccin" },
 
+  { import = "astrocommunity.completion.copilot-cmp" },
+
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
