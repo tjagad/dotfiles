@@ -13,7 +13,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias ls='exa'
 alias ll='exa -l'
-alias tmux-irssi='tmux -u -f ./.tmux.irssi.conf -L irssi new-session -s IRC'
+alias tmux-irssi='tmux -u -f ~/.config/tmux/tmux-irssi.conf -L irssi new-session -s IRC'
 
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
