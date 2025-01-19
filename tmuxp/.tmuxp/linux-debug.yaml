@@ -1,0 +1,39 @@
+session_name: linux-debug
+windows:
+  - layout: da30,187x41,0,0,21
+    focus: true
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/linux-debug/linux
+    window_name: src
+  - layout: da31,187x41,0,0,22
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/linux-debug/linux
+    window_name: grep
+  - layout: da32,187x41,0,0,23
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/linux-debug/linux
+    window_name: build
+  - layout: da33,187x41,0,0,24
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/linux-debug
+    window_name: initrd
+  - layout: b2ae,187x41,0,0{93x41,0,0,25,93x41,94,0,26}
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+      - shell:command:
+    start_directory: /home/tjagad/projects/linux-debug/linux
+    window_name: qemu-gdb
