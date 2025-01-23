@@ -20,6 +20,8 @@ return {
 
   { import = "astrocommunity.completion.copilot-cmp" },
 
+  { import = "astrocommunity.editing-support.copilotchat-nvim" },
+
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.marks-nvim" },
