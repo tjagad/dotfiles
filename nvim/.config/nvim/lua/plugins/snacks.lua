@@ -1,5 +1,6 @@
 return {
   "folke/snacks.nvim",
+  tag = "stable",
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
