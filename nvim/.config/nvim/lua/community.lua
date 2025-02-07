@@ -25,6 +25,7 @@ return {
   { import = "astrocommunity.git.blame-nvim" },
   { import = "astrocommunity.git.gitgraph-nvim" },
   { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.git.octo-nvim" },
 
   { import = "astrocommunity.motion.hop-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
