@@ -1,0 +1,39 @@
+mailboxes =inbox
+mailboxes =outbox
+
+mailboxes =tjagad.lists@gmail.com/kvm-commits
+mailboxes =tjagad.lists@gmail.com/kvm-ia64
+mailboxes =tjagad.lists@gmail.com/linux-kernel-announce
+mailboxes =tjagad.lists@gmail.com/linux-hyperv
+mailboxes =tjagad.lists@gmail.com/iommu
+mailboxes =tjagad.lists@gmail.com/kvm
+mailboxes =tjagad.lists@gmail.com/linux-arm
+mailboxes =tjagad.lists@gmail.com/linux-arm-kernel
+mailboxes =tjagad.lists@gmail.com/linux-mm
+mailboxes =tjagad.lists@gmail.com/linux-kernel
+mailboxes =tjagad.lists@gmail.com/linux-newbie
+mailboxes =tjagad.lists@gmail.com/linux-next
+mailboxes =tjagad.lists@gmail.com/openocd-devel
+mailboxes =tjagad.lists@gmail.com/openocd-user
+mailboxes =tjagad.lists@gmail.com/qemu-discuss
+mailboxes =tjagad.lists@gmail.com/qemu-devel
+mailboxes =tjagad.lists@gmail.com/qemu-stable
+mailboxes =tjagad.lists@gmail.com/qemu-trivial
+mailboxes =tjagad.lists@gmail.com/u-boot
+mailboxes =tjagad.lists@gmail.com/virtualization
+mailboxes =tjagad.lists@gmail.com/xen-announce
+mailboxes =tjagad.lists@gmail.com/xen-api
+mailboxes =tjagad.lists@gmail.com/xen-devel
+mailboxes =tjagad.lists@gmail.com/xen-users
+mailboxes =tjagad.lists@gmail.com/xvisor-devel
+mailboxes =tjagad.lists@gmail.com/acrn-main
+mailboxes =tjagad.lists@gmail.com/acrn-dev
+mailboxes =tjagad.lists@gmail.com/git
+mailboxes =tjagad.lists@gmail.com/opensbi
+mailboxes =tjagad.lists@gmail.com/zephyrproject-devel
+mailboxes =tjagad.lists@gmail.com/kubernetes-dev
+mailboxes =tjagad.lists@gmail.com/inbox
+
+mailboxes =goatindiainc@gmail.com/inbox
+
+# vim: syntax=muttrc

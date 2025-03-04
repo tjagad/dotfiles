@@ -1,0 +1,80 @@
+set from="tjagad.lists@gmail.com"
+set realname="Tushar Jagad"
+
+set folder = "$HOME/mail"
+set mbox = "+mbox"
+set record = "+outbox" # ... and it gets saved in =outbox.
+
+set move = no
+set imap_keepalive = 900
+set edit_hdrs
+#neomutt: set edit_headers
+set include
+set reply_to
+set hidden_host
+set nobeep
+set askcc = yes
+set askbcc = yes
+
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+set certificate_file = ~/.mutt/certificates
+set postponed=~/mail/postponed
+
+set smtp_url = "smtp://tjagad.lists@smtp.gmail.com:587/"
+set smtp_pass = "xxxx"
+
+source ~/.mutt/colors
+source ~/.mutt/shortcuts
+source ~/.mutt/macros
+source ~/.mutt/sidebar
+source ~/.mutt/mailboxes
+
+set editor=vi
+
+# Header stuff
+ignore *
+unignore From:
+unignore To:
+unignore Cc:
+unignore Bcc:
+unignore Message-ID:
+unignore Date:
+unignore X-Mailer:
+unignore X-OS:
+unignore X-Operating-System:
+unignore X-Knaller:
+unignore X-Virus:
+unignore User-Agent:
+unignore Subject:
+unignore X-Newsreader:
+hdr_order Date From To Cc Bcc X-Mailer X-Operating-System Subject
+
+
+# For better looks
+set markers = no # don't put '+' at the beginning of wrapped lines
+set pager_index_lines = 10 # how large is the index window?
+set pager_context = 5
+set sort = "threads"
+set sort_aux = "last-date-received"
+# set sort_aux = "subject"
+set sort_browser = "reverse-date" # showing mbox list default to newest first
+#neomutt: set use_threads=threads sort=last-date sort_aux=date
+#unset resolve
+
+set alias_file = ~/.mutt/aliases
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
+
+#Check for mail every minute
+set timeout = 60
+set mail_check = 5
+
+# integration with abook
+set query_command = "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor        <Tab> complete-query
+
+#macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+#macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"

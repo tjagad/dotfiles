@@ -1,0 +1,10 @@
+# generic bindings
+bind pager ] "half-down"
+bind pager [ "half-up"
+
+bind index,pager \Ck "previous-thread"
+bind index,pager \Cj "next-thread"
+
+bind index,pager . "next-unread-mailbox"
+
+# vim: syntax=muttrc
