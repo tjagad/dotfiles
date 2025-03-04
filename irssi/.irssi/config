@@ -361,3 +361,4 @@ settings = {
     autolog = "yes";
   };
 };
+logs = { };
