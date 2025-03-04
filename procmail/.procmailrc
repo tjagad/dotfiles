@@ -1,0 +1,167 @@
+MAILDIR=$HOME/mail
+DEFAULT=$MAILDIR/inbox
+LOGFILE=$MAILDIR/procmail.log
+SHELL=/bin/sh
+VERBOSE=off
+
+# Put mail from foo into folder foo
+
+:0:
+* ^(To|Cc).*kvm-commits@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/kvm-commits
+
+:0:
+* ^(To|Cc).*kvm-ia64@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/kvm-ia64
+
+:0:
+* ^(To|Cc).*linux-kernel-announce@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/linux-kernel-announce
+
+:0:
+* ^(To|Cc).*linux-hyperv@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/linux-hyperv
+
+:0:
+* ^(To|Cc).*iommu@lists.linux-foundation.org
+$HOME/mail/tjagad.lists@gmail.com/iommu
+
+:0:
+* ^(To|Cc).*kvm@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/kvm
+
+:0:
+* ^(To|Cc).*linux-arm@lists.infradead.org
+$HOME/mail/tjagad.lists@gmail.com/linux-arm
+
+:0:
+* ^(To|Cc).*linux-arm-kernel@lists.infradead.org
+$HOME/mail/tjagad.lists@gmail.com/linux-arm-kernel
+
+:0:
+* ^(To|Cc).*linux-mm@kvack.org
+$HOME/mail/tjagad.lists@gmail.com/linux-mm
+
+:0:
+* ^(To|Cc).*linux-kernel@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/linux-kernel
+
+:0:
+* ^(To|Cc).*linux-newbie@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/linux-newbie
+
+:0:
+* ^(To|Cc).*linux-next@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/linux-next
+
+:0:
+* ^(To|Cc).*git@vger.kernel.org
+$HOME/mail/tjagad.lists@gmail.com/git
+
+:0:
+* ^(To|Cc).*openocd-devel@lists.sourceforge.net
+$HOME/mail/tjagad.lists@gmail.com/openocd-devel
+
+:0:
+* ^(To|Cc).*openocd-user@lists.sourceforge.net
+$HOME/mail/tjagad.lists@gmail.com/openocd-user
+
+:0:
+* ^(To|Cc).*qemu-discuss@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-discuss
+
+:0:
+* ^(To|Cc).*qemu-devel@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-devel
+
+:0:
+* ^(To|Cc).*qemu-stable@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-stable
+
+:0:
+* ^(To|Cc).*qemu-trivial@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-trivial
+
+:0:
+* ^(To|Cc).*qemu-arm@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-arm
+
+
+:0:
+* ^(To|Cc).*u-boot@lists.denx.de
+$HOME/mail/tjagad.lists@gmail.com/u-boot
+
+:0:
+* ^(To|Cc).*virtualization@lists.linux-foundation.org
+$HOME/mail/tjagad.lists@gmail.com/virtualization
+
+:0:
+* ^(To|Cc).*virtualization@lists.linux.dev
+$HOME/mail/tjagad.lists@gmail.com/virtualization
+
+:0:
+* ^(To|Cc).*xen-announce@lists.xen.org
+$HOME/mail/tjagad.lists@gmail.com/xen-announce
+
+:0:
+* ^(To|Cc).*xen-api@lists.xen.org
+$HOME/mail/tjagad.lists@gmail.com/xen-api
+
+:0:
+* ^(To|Cc).*xen-api@lists.xenproject.org
+$HOME/mail/tjagad.lists@gmail.com/xen-api
+
+:0:
+* ^(To|Cc).*xen-devel@lists.xen.org
+$HOME/mail/tjagad.lists@gmail.com/xen-devel
+:0:
+* ^(To|Cc).*xen-devel@lists.xensource.com
+$HOME/mail/tjagad.lists@gmail.com/xen-devel
+:0:
+* ^(To|Cc).*xen-devel@lists.xenproject.org
+$HOME/mail/tjagad.lists@gmail.com/xen-devel
+
+:0:
+* ^(To|Cc).*xen-users@lists.xen.org
+$HOME/mail/tjagad.lists@gmail.com/xen-users
+
+:0:
+* ^(To|Cc).*xen-users@lists.xensource.com
+$HOME/mail/tjagad.lists@gmail.com/xen-users
+
+:0:
+* ^(To|Cc).*xen-users@lists.xenproject.org
+$HOME/mail/tjagad.lists@gmail.com/xen-users
+
+:0:
+* ^(To|Cc).*xvisor-devel@googlegroups.com
+$HOME/mail/tjagad.lists@gmail.com/xvisor-devel
+
+:0:
+* ^(To|Cc).*main@lists.projectacrn.org
+$HOME/mail/tjagad.lists@gmail.com/acrn-main
+
+:0:
+* ^(To|Cc).*acrn-dev@lists.projectacrn.org
+$HOME/mail/tjagad.lists@gmail.com/acrn-dev
+
+
+:0:
+* ^(To|Cc).*opensbi@lists.infradead.org
+$HOME/mail/tjagad.lists@gmail.com/opensbi
+
+:0:
+* ^(To|Cc).*devel@lists.zephyrproject.org
+$HOME/mail/tjagad.lists@gmail.com/zephyrproject-devel
+
+:0:
+* ^(To|Cc).*dev@kubernetes.io
+$HOME/mail/tjagad.lists@gmail.com/kubernetes-dev
+
+:0:
+* ^(Cc|To).*tjagad.lists@gmail.com
+$HOME/mail/tjagad.lists@gmail.com/inbox
+
+:0:
+* ^(Cc|To).*goatindiainc@gmail.com
+$HOME/mail/goatindiainc@gmail.com/inbox
