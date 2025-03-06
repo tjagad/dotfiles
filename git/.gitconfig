@@ -1,0 +1,77 @@
+[user]
+	name = Tushar Jagad
+	email = tushar.jagad@gmail.com
+[apply]
+	nowhitespace = nowarn
+[alias]
+	in = init
+	co = checkout
+	st = status
+	a = add
+	ai = add -i
+	am = am --empty=drop -s
+	cm = commit -v -s
+	su = submodule
+	up = update
+	pl = pull
+	ps = push
+	di = diff
+	br = branch
+	cl = clone
+	me = merge --no-ff --log --stat
+	cob = count-objects -v
+	tag = tag -a
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ls = ls-files
+	count-cm = !git shortlog -s -n
+	fa = fetch --all
+
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+#	pager = true
+	status = auto
+	ui = auto
+[core]
+	pager = less -FRSX
+	editor = vim
+[color "diff"]
+	new = green
+	old = red normal bold
+	meta = blue
+	func = yellow normal bold
+	frag = yellow normal bold
+	whitespace = red reverse
+[gui]
+	fontui = -family Calibri -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Monaco -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = tjagad.lists@gmail.com
+	smtppass = xxxx
+	chainreplyto = false
+[git-p4]
+	detectRenames = true
+  detectCopies = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[http]
+	sslverify = false
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
