@@ -34,6 +34,8 @@ return {
         wrap = true, -- sets vim.opt.wrap
         colorcolumn = "80",
         tw = 80,
+        wmh = 0,
+        wmw = 0,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -62,12 +64,19 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        ["<leader><F11>"] = { "<ESC><C-W>_", desc = "Maximize buffer" },
+        ["<leader>_Y"] = { ":.w! ~/.vi_tmp<CR>", desc = "Copy selection to ~/.vi_tmp" },
+        ["<leader>_P"] = { ":r ~/.vi_tmp<CR>", desc = "Paste from ~/.vi_tmp" },
+
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      v = {
+        ["<leader>_Y"] = { ":.w! ~/.vi_tmp<CR>", desc = "Copy selection to ~/.vi_tmp" },
       },
     },
   },
