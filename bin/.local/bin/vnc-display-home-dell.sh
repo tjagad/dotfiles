@@ -1,4 +1,4 @@
 #! /bin/bash
 
-xrandr -s 1900x1020
+xrandr -s 1910x1010
 xrandr --dpi 96
