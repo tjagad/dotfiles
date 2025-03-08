@@ -42,7 +42,6 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
-  { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
 
   { import = "astrocommunity.terminal-integration.vim-tmux-navigator" },
