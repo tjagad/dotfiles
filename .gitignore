@@ -4,5 +4,6 @@ tmux/.config/tmux/plugins/tmux-battery/
 tmux/.config/tmux/plugins/tmux-fzf/
 tmux/.config/tmux/plugins/tmux/
 tmux/.config/tmux/plugins/vim-tmux-navigator/
+tmux/.config/tmux/plugins/tmux-floax/
 
 irssi/.irssi/logs/*
