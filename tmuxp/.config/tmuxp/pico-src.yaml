@@ -1,0 +1,11 @@
+session_name: pico-src
+windows:
+  - window_name:  sh
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+      - shell_command:
+      - shell_command:
+    layout: main-horizontal
+    start_directory: $HOME/projects/rpi/src/pico-examples/
