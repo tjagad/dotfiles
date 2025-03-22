@@ -1,11 +1,20 @@
 session_name: pico-src
 windows:
-  - window_name:  sh
+  - window_name: sdk
     options: {}
     panes:
       - focus: "true"
         shell_command:
-      - shell_command:
-      - shell_command:
-    layout: main-horizontal
+    start_directory: $HOME/projects/rpi/src/pico-sdk/
+  - window_name: extras
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: $HOME/projects/rpi/src/pico-extras/
+  - window_name: examples
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
     start_directory: $HOME/projects/rpi/src/pico-examples/
