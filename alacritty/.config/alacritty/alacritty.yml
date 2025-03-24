@@ -9,7 +9,7 @@ window:
     y: 5
 
 cursor:
-  style: Block
+  style: "Block"
   unfocused_hollow: true
 
 mouse:
@@ -19,7 +19,7 @@ font:
   normal:
     family: "CodeNewRoman Nerd Font"
     style: "Regular"
-  size: 14.0
+  size: 16.0
 
 scrolling:
   history: 10000
