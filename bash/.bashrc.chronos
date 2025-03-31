@@ -11,8 +11,8 @@ unset PROMPT_COMMAND
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ls='exa'
-alias ll='exa -l'
+alias ls='eza'
+alias ll='eza -l -g'
 alias tmux-irssi='tmux -u -f ~/.config/tmux/tmux-irssi.conf -L irssi new-session -s IRC'
 
 eval "$(zoxide init bash)"
