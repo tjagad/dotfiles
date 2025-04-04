@@ -10,7 +10,7 @@ TERM = "xterm-256color"
 size = 16.0
 
 [font.normal]
-family = "CodeNewRoman Nerd Font"
+family = "CodeNewRoman Nerd Font Mono"
 style = "Regular"
 
 [mouse]
