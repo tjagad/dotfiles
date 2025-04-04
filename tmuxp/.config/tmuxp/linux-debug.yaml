@@ -1,4 +1,6 @@
 session_name: linux-debug
+shell_command_before:
+  - tmux set-option @floax-session-name "linux-debug-floax"
 windows:
   - layout: da30,187x41,0,0,21
     focus: true

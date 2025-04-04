@@ -1,4 +1,6 @@
 session_name: pico-src
+shell_command_before:
+  - tmux set-option @floax-session-name "pico-src-floax"
 windows:
   - window_name: sdk
     options: {}

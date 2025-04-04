@@ -1,4 +1,6 @@
 session_name: pwr-ctrl
+shell_command_before:
+  - tmux set-option @floax-session-name "pwr-ctrl-floax"
 windows:
   - window_name:  sh
     options: {}
