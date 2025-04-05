@@ -27,6 +27,7 @@
 	ls = ls-files
 	count-cm = !git shortlog -s -n
 	fa = fetch --all
+	as = assembler
 
 [color]
 	branch = auto
