@@ -1,4 +1,6 @@
 return {
   "lukas-reineke/virt-column.nvim",
-  opts = {},
+  opts = {
+    char = "│",
+  },
 }
