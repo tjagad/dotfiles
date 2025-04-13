@@ -1,5 +1,5 @@
 return {
-  "LazyVim/LazyVim",
+  "zbirenbaum/copilot.lua",
   opts = {
     filetypes = {
       yaml = true,
