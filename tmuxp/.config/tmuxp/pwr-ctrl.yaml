@@ -2,12 +2,14 @@ session_name: pwr-ctrl
 shell_command_before:
   - tmux set-option @floax-session-name "pwr-ctrl-floax"
 windows:
-  - window_name:  sh
+  - window_name:  vi
     options: {}
     panes:
       - focus: "true"
         shell_command:
+    start_directory: $HOME/projects/rpi/pico2-w-pwr-ctrl/
+  - window_name:  build
+    options: {}
+    panes:
       - shell_command:
-      - shell_command:
-    layout: main-horizontal
     start_directory: $HOME/projects/rpi/pico2-w-pwr-ctrl/
