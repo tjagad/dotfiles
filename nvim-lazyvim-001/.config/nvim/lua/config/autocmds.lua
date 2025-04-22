@@ -8,7 +8,7 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 -- Set tab and other settings for Linux kernel and C projects
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp", "h", "make", "S" },
+  pattern = { "c", "cpp", "h", "make", "S", "sh" },
   callback = function()
     vim.bo.expandtab = false
     vim.bo.shiftwidth = 8
