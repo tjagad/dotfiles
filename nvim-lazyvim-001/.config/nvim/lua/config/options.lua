@@ -2,6 +2,14 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
+-- turn off relative line numbers
 vim.opt.relativenumber = false
+
+-- show sign column
+vim.opt.signcolumn = "yes"
+
+-- set colorcolumn to 80 characters
+vim.opt.colorcolumn = "80"
+
+-- turn off autoformatting
+vim.g.autoformat = false
