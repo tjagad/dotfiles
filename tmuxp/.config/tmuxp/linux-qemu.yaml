@@ -1,0 +1,38 @@
+session_name: linux-qemu
+windows:
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux
+  window_name: linux-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux
+  window_name: linux-git
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/qemu
+  window_name: qemu-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/qemu
+  window_name: qemu-git
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/kvmtool
+  window_name: kvmtool-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/kvmtool
+  window_name: kvmtool-git
