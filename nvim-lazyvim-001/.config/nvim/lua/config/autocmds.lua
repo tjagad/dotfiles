@@ -10,13 +10,18 @@
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "c", "cpp", "h", "make", "S", "sh" },
   callback = function()
-    vim.bo.expandtab = false
-    vim.bo.shiftwidth = 8
-    vim.bo.tabstop = 8
-    vim.bo.cindent = true
-    vim.bo.autoindent = true
-    vim.bo.textwidth = 80
-    vim.wo.wrap = false
     vim.bo.formatoptions = vim.bo.formatoptions:gsub("[cro]", "")
   end,
+})
+
+vim.filetype.add({
+  extension = {
+    h = "c", -- Treat .h files as C files
+  },
+})
+
+vim.filetype.add({
+  extension = {
+    S = "asm", -- Treat .S files as assembly
+  },
 })
