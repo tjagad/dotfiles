@@ -1,6 +1,6 @@
 session_name: mgmt
-shell_command_before:
-  - tmux set-option @floax-session-name "mgmt-floax"
+# shell_command_before:
+#   - tmux set-option @floax-session-name "mgmt-floax"
 windows:
   - window_name:  rsh
     options: {}
