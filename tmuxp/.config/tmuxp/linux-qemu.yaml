@@ -36,3 +36,15 @@ windows:
     shell_command:
   start_directory: /home/tjagad/projects/repos/kvmtool
   window_name: kvmtool-git
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/u-boot
+  window_name: uboot-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/u-boot
+  window_name: uboot-git
