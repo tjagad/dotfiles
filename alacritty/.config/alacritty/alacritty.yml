@@ -17,9 +17,10 @@ mouse:
 
 font:
   normal:
-    family: "CodeNewRoman Nerd Font"
+    family: "CodeNewRoman Nerd Font Mono"
+    # family: "Maple Mono NF"
     style: "Regular"
-  size: 16.0
+  size: 13.0
 
 scrolling:
   history: 10000
