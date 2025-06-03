@@ -7,7 +7,7 @@ color = "#F5E0DC"
 index = 17
 
 [colors.bright]
-black = "#585B70"
+black = "#000000"
 blue = "#89B4FA"
 cyan = "#94E2D5"
 green = "#A6E3A1"
@@ -21,7 +21,7 @@ cursor = "#F5E0DC"
 text = "#1E1E2E"
 
 [colors.dim]
-black = "#45475A"
+black = "#000000"
 blue = "#89B4FA"
 cyan = "#94E2D5"
 green = "#A6E3A1"
@@ -39,7 +39,7 @@ background = "#F9E2AF"
 foreground = "#1E1E2E"
 
 [colors.normal]
-black = "#45475A"
+black = "#000000"
 blue = "#89B4FA"
 cyan = "#94E2D5"
 green = "#A6E3A1"
