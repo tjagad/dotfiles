@@ -162,6 +162,7 @@ channels = (
   { name = "#u-boot"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#wireguard"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#raspberrypi"; chatnet = "liberachat"; autojoin = "yes"; },
+  { name = "#neovim"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#debian"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#debian-next"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#kernelnewbies"; chatnet = "oftc"; autojoin = "yes"; },
