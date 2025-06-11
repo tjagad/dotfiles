@@ -10,6 +10,13 @@ return {
           crust = "#000000",
         },
       },
+      highlight_overrides = {
+        mocha = function(colors)
+          return {
+            WinSeparator = { fg = "#45475a" },
+          }
+        end,
+      },
     },
   },
   {
