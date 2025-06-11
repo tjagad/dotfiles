@@ -25,3 +25,8 @@ vim.filetype.add({
     S = "asm", -- Treat .S files as assembly
   },
 })
+
+vim.api.nvim_create_autocmd("BufRead", {
+  pattern = "/home/tjagad/projects/repos/linux/**/*",
+  command = "set tags=/home/tjagad/projects/repos/linux/_output/tags",
+})
