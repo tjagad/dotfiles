@@ -3,5 +3,7 @@ tmux/.config/tmux/plugins/tmux-fzf/
 tmux/.config/tmux/plugins/tmux/
 tmux/.config/tmux/plugins/vim-tmux-navigator/
 tmux/.config/tmux/plugins/tmux-floax/
-
+tmux/.config/tmux/plugins/extrakto/
+tmux/.config/tmux/plugins/tmux-mem-cpu-load/
+tmux/.config/tmux/plugins/tmux-yank/
 irssi/.irssi/logs/*
