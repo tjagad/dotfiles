@@ -13,6 +13,7 @@ function toggle_clean_copy(is_copy_mode)
   if is_copy_mode then
     -- Enable clean copy mode: hide UI elements for distraction-free copying
     vim.opt.number = false
+    vim.opt.relativenumber = false
     vim.opt.signcolumn = "no"
     vim.opt.list = false
     vc.overwrite({char = ""})
@@ -20,6 +21,7 @@ function toggle_clean_copy(is_copy_mode)
   else
     -- Restore normal editor settings
     vim.opt.number = true
+    vim.opt.relativenumber = true
     vim.opt.signcolumn = "yes"
     vim.opt.list = true
     vc.overwrite({char = "│"})
