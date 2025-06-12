@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 -- turn off relative line numbers
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 -- show sign column
 vim.opt.signcolumn = "yes"
