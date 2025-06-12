@@ -2,4 +2,7 @@
     "diagnostics.globals": [
         "toggle_clean_copy"
     ],
+    "diagnostics.disable": [
+        "undefined-field"
+    ],
 }

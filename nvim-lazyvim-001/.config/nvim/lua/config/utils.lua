@@ -1,30 +1,40 @@
---- Toggle "Clean Copy Mode" for Neovim.
---  When enabled, disables line numbers, signcolumn, listchars, cursorcolumn,
---  and indentation guides for a distraction-free view (useful for copying text).
---  When disabled, restores the previous editor settings.
-function toggle_clean_copy()
+local M = {}
+
+local snacks = require("snacks")
+
+--- Toggle "Copy Mode" for Neovim.
+--  When enabled, disables line numbers, signcolumn, listchars,
+--  and indentation guides for a distraction-free view and useful for
+--  copying text). When disabled, restores the previous editor settings.
+function toggle_clean_copy(is_copy_mode)
+  local vc = require("virt-column")
+
   -- Determine if clean copy mode should be enabled (line numbers off)
----@diagnostic disable-next-line: undefined-field
-  local is_clean = not vim.opt.number:get()
-  if not is_clean then
+  if is_copy_mode then
     -- Enable clean copy mode: hide UI elements for distraction-free copying
     vim.opt.number = false
     vim.opt.signcolumn = "no"
     vim.opt.list = false
-    vim.opt.cursorcolumn = false
-    require("virt-column").overwrite({char = ""})
-    Snacks.indent.disable()
-    vim.notify(" Clean Copy Mode")
+    vc.overwrite({char = ""})
+    snacks.indent.disable()
   else
     -- Restore normal editor settings
     vim.opt.number = true
     vim.opt.signcolumn = "yes"
     vim.opt.list = true
-    vim.opt.cursorcolumn = true
-    require("virt-column").overwrite({char = "│"})
-    Snacks.indent.enable()
-    vim.notify(" Clean Copy Mode")
+    vc.overwrite({char = "│"})
+    snacks.indent.enable()
   end
 end
 
-return {}
+snacks.toggle({
+  name = "Copy Mode",
+  get = function()
+    return not vim.opt.number:get()
+  end,
+  set = function(state)
+    toggle_clean_copy(state)
+  end,
+}):map("<leader>uu")
+
+return M
