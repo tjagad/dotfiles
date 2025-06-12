@@ -37,4 +37,15 @@ snacks.toggle({
   end,
 }):map("<leader>uu")
 
+snacks.toggle({
+  name = "Show keys",
+  get = function()
+    return vim.g.showkeys_status
+  end,
+  set = function(state)
+    vim.g.showkeys_status = state
+    require("showkeys").toggle()
+  end,
+}):map("<leader>uk")
+
 return M
