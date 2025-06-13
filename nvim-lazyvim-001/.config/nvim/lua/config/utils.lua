@@ -50,4 +50,15 @@ snacks.toggle({
   end,
 }):map("<leader>uk")
 
+snacks.toggle({
+  name = "Hardtime",
+  get = function()
+    return not vim.g.hardtime_status
+  end,
+  set = function(state)
+    vim.g.hardtime_status = not state
+    vim.cmd("Hardtime toggle")
+  end,
+}):map("<leader>uH")
+
 return M
