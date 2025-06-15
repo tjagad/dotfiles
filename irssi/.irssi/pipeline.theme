@@ -10,7 +10,7 @@
 #  Author: Beau Hastings <beau@saweet.net>
 #  URL: https://github.com/hastinbe/irssi-theme-pipeline
 
-replaces = { "/[]=" = "%K$*%n"; "*@+." = "%B$*%n"; };
+replaces = { "/[]=" = "%M$*%n"; "*@+." = "%B$*%n"; };
 
 #replaces = { "!@+" = "%r$*%n"; };
 info_eol = "false";
@@ -82,7 +82,7 @@ abstracts = {
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
   #msgnick = "<%C$0%n$1-%n> %|";
-  msgnick = "%b%n$0$1%K |%n %|";
+  msgnick = "%b%n$0$1%M |%n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -94,11 +94,11 @@ abstracts = {
   #  ownmsgnick = "%Y{msgnick $0 $1-%Y}%n";
   #  (you'll also have to remove <> from replaces list above)
   # Example2.2: But you still want to keep <> grey for other messages:
-  #  pubmsgnick = "%K{msgnick $0 $1-%K}%n";
-  #  pubmsgmenick = "%K{msgnick $0 $1-%K}%n";
-  #  pubmsghinick = "%K{msgnick $1 $0$2-%n%K}%n";
-  #  ownprivmsgnick = "%K{msgnick  $*%K}%n";
-  #  privmsgnick = "%K{msgnick  %R$*%K}%n";
+  #  pubmsgnick = "%M{msgnick $0 $1-%M}%n";
+  #  pubmsgmenick = "%M{msgnick $0 $1-%M}%n";
+  #  pubmsghinick = "%M{msgnick $1 $0$2-%n%M}%n";
+  #  ownprivmsgnick = "%M{msgnick  $*%M}%n";
+  #  privmsgnick = "%M{msgnick  %R$*%M}%n";
 
   # $0 = nick mode, $1 = nick
   ownmsgnick = "{msgnick $0 $1-}%W";
@@ -151,7 +151,7 @@ abstracts = {
   ownaction = "{action $*}";
 
   # own action with target, both private/public
-  ownaction_target = "{action_core $0}%K:%b$1%n ";
+  ownaction_target = "{action_core $0}%M:%b$1%n ";
 
   # private action sent by others
   pvtaction = "%w $*%n ";
@@ -168,8 +168,8 @@ abstracts = {
   # notices
   ownnotice = "%b>%c>%C> %c$0%B!%c$1%n: ";
   notice = "%b$*%n ";
-  pubnotice_channel = "%K:%m$*";
-  pubnotice_host = "%K(%m$*%K)";
+  pubnotice_channel = "%M:%m$*";
+  pubnotice_host = "%M(%m$*%M)";
   servernotice = "%g!$*%n ";
 
   # CTCPs
@@ -195,13 +195,13 @@ abstracts = {
   dccfile = "%_$*%_";
 
   # DCC chat, own msg/action
-  dccownmsg = "[%b$0%K($1-%K)%n] ";
+  dccownmsg = "[%b$0%M($1-%M)%n] ";
   dccownnick = "%B$*%n";
   dccownaction = "{action $*}";
-  dccownaction_target = "{action_core $0}%K:%b$1%n ";
+  dccownaction_target = "{action_core $0}%M:%b$1%n ";
 
   # DCC chat, others
-  dccmsg = "[%B$1-%K(%b$0%K)%n] ";
+  dccmsg = "[%B$1-%M(%b$0%M)%n] ";
   dccquerynick = "%B$*%n";
   dccaction = "%W (*dcc*) $*%n %|";
 
@@ -230,24 +230,24 @@ abstracts = {
 
   # usercount
   sb_usercount = "{sb %W$0%n $1-}";
-  sb_uc_ircops = "%_*%_%K/%R$*%n";
-  sb_uc_ops = "%_@%_%K/%G$*%n";
-  sb_uc_halfops = "%_=%_%K/%g$*%n";
-  sb_uc_voices = "%_+%_%K/%Y$*%n";
-  sb_uc_normal = "%_.%_%K/%W$*%n";
+  sb_uc_ircops = "%_*%_%M/%R$*%n";
+  sb_uc_ops = "%_@%_%M/%G$*%n";
+  sb_uc_halfops = "%_=%_%M/%g$*%n";
+  sb_uc_voices = "%_+%_%M/%Y$*%n";
+  sb_uc_normal = "%_.%_%M/%W$*%n";
   sb_uc_space = " ";
 
 };
 
-# %r%n%_$0%_$1%K |%n %|
+# %r%n%_$0%_$1%M |%n %|
 formats = {
   "fe-common/core" = {
     pubmsg = "{pubmsgnick $nickalign$2 {pubnick $nickcolor$[.16]0$nicktrunc}}$1";
-    join = "             %_%Bjoin%_%K |%n %g{channick_hilight $0}%K!%n{chanhost_hilight $1}";
-    part = "             %_%Bpart%_%K |%n %W{channick $0}%K!%n{chanhost $1}: {reason $3}";
-    kick = "             %_%Bkick%_%K |%n %r{channick $0} %nby {nick $2} from {channel $1}: {reason $3}";
-    quit = "             %_%Bquit%_%K |%n %W{channick $0}%K!%n{chanhost $1}: {reason $2}";
-    nick_changed = "             %_%Bnick%_%K |%n {nick %w$0%n} %Nis now {nick %W$1%n}";
+    join = "             %_%Bjoin%_%M |%n %g{channick_hilight $0}%M!%n{chanhost_hilight $1}";
+    part = "             %_%Bpart%_%M |%n %W{channick $0}%M!%n{chanhost $1}: {reason $3}";
+    kick = "             %_%Bkick%_%M |%n %r{channick $0} %nby {nick $2} from {channel $1}: {reason $3}";
+    quit = "             %_%Bquit%_%M |%n %W{channick $0}%M!%n{chanhost $1}: {reason $2}";
+    nick_changed = "             %_%Bnick%_%M |%n {nick %w$0%n} %Nis now {nick %W$1%n}";
     endofnames = "{channel $0}: {hilight $1} nicks ({comment @/{hilight $2} +/{hilight $3}  -/{hilight $4}})";
     own_msg = "{ownmsgnick $nickalign$2 {ownnick $nickcolor$[.16]0$nicktrunc}}$1";
     own_msg_channel = "{ownmsgnick $nickalign$3 {ownnick $nickcolor$[.16]0$nicktrunc}{msgchannel $1}}$2";
@@ -255,15 +255,15 @@ formats = {
     pubmsg_me_channel = "{pubmsgmenick $nickalign$3 {menick $[.16]0$nicktrunc}{msgchannel $1}}$2";
     pubmsg_hilight = "{pubmsghinick $0 $nickalign$3 $[.16]1$nicktrunc}$2";
     pubmsg_channel = "{pubmsgnick $nickalign$3 {pubnick $nickcolor$[.16]0$nicktrunc}{msgchannel $1}}$2";
-    chanmode_change = "             %_%Bmode%_%K |%n {$channel $0} %W{channick_hilight $2} %nsets mode %B{$mode $1}";
-    channel_mode = "             %_%Bmode%_%K |%n {$channel $0} %W{channick_hilight $2} %nsets mode %B{$mode $1}";
+    chanmode_change = "             %_%Bmode%_%M |%n {$channel $0} %W{channick_hilight $2} %nsets mode %B{$mode $1}";
+    channel_mode = "             %_%Bmode%_%M |%n {$channel $0} %W{channick_hilight $2} %nsets mode %B{$mode $1}";
     own_msg_private_query = "{ownprivmsgnick $nickalign{ownprivnick $nickcolor$[.16]2$nicktrunc}}$1";
     pubmsg_hilight_channel = "{pubmsghinick $0 $nickalign$4 $[.16]1$nicktrunc{msgchannel $2}}$3";
     msg_private_query = "{privmsgnick $nickalign$nickcolor$[.16]0$nicktrunc}$2";
   };
   "fe-common/text" = { window_info_sticky = "%#  Sticky  : $0"; };
   "fe-common/irc" = {
-    chanmode_change = "             %_%Bmode%_%K |%n %y{channick_hilight $2} %nsets mode %b{$mode $1} %non {$channelhilight $0}";
+    chanmode_change = "             %_%Bmode%_%M |%n %y{channick_hilight $2} %nsets mode %b{$mode $1} %non {$channelhilight $0}";
     whois = "{hilight $0} [{nickhost $1@$2}] [$whois_country]%: ircname  : $3";
     server_chanmode_change = "{netsplit ServerMode}/{channelhilight $0}: {mode $1} by {nick $2}";
     whois_server = " server   : $1 ({comment $2})";
