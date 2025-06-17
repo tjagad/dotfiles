@@ -175,17 +175,17 @@ channels = (
 ignores = (
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#osdev" );
+    channels = ( "#osdev", "#raspberrypi");
     network = "freenode";
   },
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#u-boot", "#wireguard" );
+    channels = ( "#neovim", "#raspberrypi", "#u-boot", "#wireguard", );
     network = "liberachat";
   },
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#debian", "#kernelnewbies", "#kvm", "#mm", "#qemu", "#virt" );
+    channels = ( "#debian", "#debian-next", "#kernelnewbies", "#kvm", "#mm", "#qemu", "#virt" );
     network = "oftc";
   }
 );
