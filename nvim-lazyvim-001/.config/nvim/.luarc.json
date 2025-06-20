@@ -1,8 +1,9 @@
 {
     "diagnostics.globals": [
-        "toggle_clean_copy"
+        "toggle_clean_copy",
+        "update_move_count_keymaps"
     ],
     "diagnostics.disable": [
         "undefined-field"
-    ],
+    ]
 }

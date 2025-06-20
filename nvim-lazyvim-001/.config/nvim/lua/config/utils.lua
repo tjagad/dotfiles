@@ -1,6 +1,29 @@
 local M = {}
 
+--- globals
+vim.g.move_count = vim.g.move_count or 3
+
+--- local variables
 local snacks = require("snacks")
+local wk = require("which-key")
+
+--- which-key extension
+wk.add({
+  {"<leader>o", group="options", icon = { icon = "", color = "green" } }
+})
+
+-- Updates keymaps for Alt+h/j/k/l to move by a specified count in normal mode
+function update_move_count_keymaps(count)
+      vim.keymap.set("n", "<A-h>", count .. "h",
+        { desc = "Navigate left by " .. count .. " characters" })
+      vim.keymap.set("n", "<A-j>", count .. "j",
+        { desc = "Navigate down by " .. count .. " lines" })
+      vim.keymap.set("n", "<A-k>", count .. "k",
+        { desc = "Navigate up by " .. count .. " lines" })
+      vim.keymap.set("n", "<A-l>", count .. "l",
+        { desc = "Navigate right by " .. count .. " characters" })
+end
+update_move_count_keymaps(vim.g.move_count)
 
 --- Toggle "Copy Mode" for Neovim.
 --  When enabled, disables line numbers, signcolumn, listchars,

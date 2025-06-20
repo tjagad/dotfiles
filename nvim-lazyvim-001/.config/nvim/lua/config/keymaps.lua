@@ -35,3 +35,19 @@ Snacks.toggle({
     vim.cmd("Hardtime toggle")
   end,
 }):map("<leader>uH")
+
+vim.keymap.set(
+  "n",
+  "<leader>om",
+  function()
+    vim.ui.input({ prompt = "Set move_count: ",
+      default = tostring(vim.g.move_count or 3) },
+      function(input)
+        if input then
+          vim.g.move_count = tonumber(input) or vim.g.move_count
+          update_move_count_keymaps(vim.g.move_count)
+        end
+      end)
+  end,
+  { desc = "Set move_count" }
+)
