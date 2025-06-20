@@ -51,3 +51,23 @@ vim.keymap.set(
   end,
   { desc = "Set move_count" }
 )
+
+vim.keymap.set(
+  {"n", "v"},
+  "_Y",
+  function ()
+    vim.cmd("w! ~/.vi_tmp")
+    vim.notify("Wrote to ~/.vi_tmp", vim.log.levels.INFO)
+  end,
+  {desc = "Write buffer or selection to ~/.vi_tmp"}
+)
+
+vim.keymap.set(
+  {"n"},
+  "_P",
+  function ()
+    vim.cmd("r ~/.vi_tmp")
+    vim.notify("Read from ~/.vi_tmp", vim.log.levels.INFO)
+  end,
+  {desc = "Read from ~/.vi_tmp"}
+)
