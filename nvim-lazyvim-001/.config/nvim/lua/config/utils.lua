@@ -29,36 +29,4 @@ function toggle_clean_copy(is_copy_mode)
   end
 end
 
-snacks.toggle({
-  name = "Copy Mode",
-  get = function()
-    return not vim.opt.number:get()
-  end,
-  set = function(state)
-    toggle_clean_copy(state)
-  end,
-}):map("<leader>uu")
-
-snacks.toggle({
-  name = "Show keys",
-  get = function()
-    return vim.g.showkeys_status
-  end,
-  set = function(state)
-    vim.g.showkeys_status = state
-    require("showkeys").toggle()
-  end,
-}):map("<leader>uk")
-
-snacks.toggle({
-  name = "Hardtime",
-  get = function()
-    return not vim.g.hardtime_status
-  end,
-  set = function(state)
-    vim.g.hardtime_status = not state
-    vim.cmd("Hardtime toggle")
-  end,
-}):map("<leader>uH")
-
 return M
