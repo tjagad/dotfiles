@@ -10,3 +10,6 @@ vim.opt.colorcolumn = "80"
 
 -- turn off autoformatting
 vim.g.autoformat = false
+
+-- turn off lsp logging by default
+vim.lsp.set_log_level("off")
