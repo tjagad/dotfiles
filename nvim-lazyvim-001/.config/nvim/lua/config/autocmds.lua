@@ -30,3 +30,12 @@ vim.api.nvim_create_autocmd("BufRead", {
   pattern = "/home/tjagad/projects/repos/linux/**/*",
   command = "set tags=/home/tjagad/projects/repos/linux/_output/tags",
 })
+
+vim.api.nvim_create_autocmd({ 'LspAttach' }, {
+    group = vim.api.nvim_create_augroup('Hierarchy', { clear = true }),
+    desc = 'Set up the :FunctionReferences user command',
+    callback = function()
+        local opts = {}
+        require('hierarchy').setup(opts)
+    end
+})
