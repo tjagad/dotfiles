@@ -74,3 +74,28 @@ vim.keymap.set(
   end,
   {desc = "Read from ~/.vi_tmp"}
 )
+
+vim.keymap.set(
+  "n",
+  "<leader>wn",
+  ":new<CR>",
+  { desc = "Create new horizontal window"}
+)
+vim.keymap.set(
+  "n",
+  "<leader>wN",
+  ":vnew<CR>",
+  {desc = "Create new vertical window"}
+)
+vim.keymap.set(
+  "n",
+  "<c-w>n",
+  ":new<CR>",
+  { desc = "Create new horizontal window"}
+)
+vim.keymap.set(
+  "n",
+  "<c-w>N",
+  ":vnew<CR>",
+  {desc = "Create new vertical window"}
+)
