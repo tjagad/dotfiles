@@ -28,11 +28,14 @@ Snacks.toggle({
 Snacks.toggle({
   name = "Hardtime",
   get = function()
-    return not vim.g.hardtime_status
+    return require("hardtime").is_plugin_enabled
   end,
   set = function(state)
-    vim.g.hardtime_status = not state
-    vim.cmd("Hardtime toggle")
+    if state then
+      require("hardtime").enable()
+    else
+      require("hardtime").disable()
+    end
   end,
 }):map("<leader>uH")
 
