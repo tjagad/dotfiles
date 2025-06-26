@@ -16,10 +16,10 @@ wk.add({
 function update_move_count_keymaps(count)
       vim.keymap.set({"n", "v"}, "<C-A-h>", count .. "h",
         { desc = "Navigate left by " .. count .. " characters" })
-      vim.keymap.set({"n", "v"}, "<C-A-j>", count .. "j",
-        { desc = "Navigate down by " .. count .. " lines" })
-      vim.keymap.set({"n", "v"}, "<C-A-k>", count .. "k",
-        { desc = "Navigate up by " .. count .. " lines" })
+      vim.keymap.set({"n", "v"}, "<C-A-j>", "mZ" .. count .. "j",
+        { desc = "Navigate down by " .. count .. " lines and mark position" })
+      vim.keymap.set({"n", "v"}, "<C-A-k>", "mZ" .. count .. "k",
+        { desc = "Navigate up by " .. count .. " lines and mark position" })
       vim.keymap.set({"n", "v"}, "<C-A-l>", count .. "l",
         { desc = "Navigate right by " .. count .. " characters" })
 end
