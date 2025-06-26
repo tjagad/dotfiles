@@ -14,13 +14,13 @@ wk.add({
 
 -- Updates keymaps for Alt+h/j/k/l to move by a specified count in normal mode
 function update_move_count_keymaps(count)
-      vim.keymap.set("n", "<C-A-h>", count .. "h",
+      vim.keymap.set({"n", "v"}, "<C-A-h>", count .. "h",
         { desc = "Navigate left by " .. count .. " characters" })
-      vim.keymap.set("n", "<C-A-j>", count .. "j",
+      vim.keymap.set({"n", "v"}, "<C-A-j>", count .. "j",
         { desc = "Navigate down by " .. count .. " lines" })
-      vim.keymap.set("n", "<C-A-k>", count .. "k",
+      vim.keymap.set({"n", "v"}, "<C-A-k>", count .. "k",
         { desc = "Navigate up by " .. count .. " lines" })
-      vim.keymap.set("n", "<C-A-l>", count .. "l",
+      vim.keymap.set({"n", "v"}, "<C-A-l>", count .. "l",
         { desc = "Navigate right by " .. count .. " characters" })
 end
 update_move_count_keymaps(vim.g.move_count)
