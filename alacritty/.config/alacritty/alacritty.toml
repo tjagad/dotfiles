@@ -13,6 +13,7 @@ offset.y = 0 # For line spacing (default: 0)
 [font.normal]
 family = "CodeNewRoman Nerd Font Mono"
 # family = "Maple Mono NF"
+# family = "MonacoLigaturized Nerd Font Mono"
 style = "Regular"
 
 [mouse]
