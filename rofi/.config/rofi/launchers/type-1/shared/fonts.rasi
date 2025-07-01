@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "UbuntuSans Nerd Font 12";
+    font: "MonacoLigaturized Nerd Font Mono 10";
 }
