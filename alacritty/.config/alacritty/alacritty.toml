@@ -6,14 +6,15 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 13.0
+size = 12.0
 offset.x = 0 # For letter spacing (default: 0)
 offset.y = 0 # For line spacing (default: 0)
 
 [font.normal]
-family = "CodeNewRoman Nerd Font Mono"
+# family = "CodeNewRoman Nerd Font Mono"
 # family = "Maple Mono NF"
-# family = "MonacoLigaturized Nerd Font Mono"
+family = "MonacoLigaturized Nerd Font Mono"
+# family = "RecMonoCasualNerdFontMono Nerd Font"
 style = "Regular"
 
 [mouse]
