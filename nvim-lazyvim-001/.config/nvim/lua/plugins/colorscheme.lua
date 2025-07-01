@@ -14,6 +14,8 @@ return {
         mocha = function(colors)
           return {
             WinSeparator = { fg = "#45475a" },
+            -- use soft green, no italics for comments
+            Comment = { fg = "#a6e3a1", style = {} },
           }
         end,
       },
