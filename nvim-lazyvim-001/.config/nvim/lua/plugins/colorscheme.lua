@@ -16,6 +16,8 @@ return {
             WinSeparator = { fg = "#45475a" },
             -- use soft green, no italics for comments
             Comment = { fg = "#a6e3a1", style = {} },
+            -- override default Pmenu colors to match overrides above
+            Pmenu = { fg=colors.text, bg=colors.base },
           }
         end,
       },
