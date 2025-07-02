@@ -10,6 +10,7 @@ return {
           crust = "#000000",
         },
       },
+      no_italic = true,
       highlight_overrides = {
         mocha = function(colors)
           return {
