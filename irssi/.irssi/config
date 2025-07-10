@@ -169,6 +169,7 @@ channels = (
   { name = "#kvm"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#mm"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#qemu"; chatnet = "oftc"; autojoin = "yes"; },
+  { name = "#qemu-rust"; chatnet = "oftc"; autojoin = "yes"; },
   { name = "#virt"; chatnet = "oftc"; autojoin = "yes"; }
 );
 
@@ -185,7 +186,7 @@ ignores = (
   },
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#debian", "#debian-next", "#kernelnewbies", "#kvm", "#mm", "#qemu", "#virt" );
+    channels = ( "#debian", "#debian-next", "#kernelnewbies", "#kvm", "#mm", "#qemu", "#qemu-rust", "#virt" );
     network = "oftc";
   }
 );
