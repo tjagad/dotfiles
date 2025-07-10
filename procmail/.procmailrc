@@ -75,6 +75,10 @@ $HOME/mail/tjagad.lists@gmail.com/qemu-discuss
 $HOME/mail/tjagad.lists@gmail.com/qemu-devel
 
 :0:
+* ^(To|Cc).*qemu-devel@nongnu.org
+$HOME/mail/tjagad.lists@gmail.com/qemu-rust
+
+:0:
 * ^(To|Cc).*qemu-stable@nongnu.org
 $HOME/mail/tjagad.lists@gmail.com/qemu-stable
 
