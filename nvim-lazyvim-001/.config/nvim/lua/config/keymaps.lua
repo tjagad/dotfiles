@@ -2,6 +2,13 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+
+-- overwrite lazyvim keymaps
+vim.keymap.del("n", "H")
+vim.keymap.del("n", "L")
+
+
+-- define new keymaps
 local Snacks = require("snacks")
 
 Snacks.toggle({
