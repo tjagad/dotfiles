@@ -20,6 +20,7 @@
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
 font-family = Maple Mono NF Medium
+font-family = FiraCode Nerd Font Mono
 font-family = JetBrainsMono NFM Medium
 font-family = VictorMono NFM SemiBold
 font-family = CodeNewRoman Nerd Font Mono
