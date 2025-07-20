@@ -207,7 +207,6 @@ gaps inner 2px
 gaps outer 2px
 
 exec_always --no-startup-id picom
-exec_always --no-startup-id dunst
 exec_always --no-startup-id redshift -m randr -P -O 3500
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/current
