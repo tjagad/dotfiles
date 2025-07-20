@@ -198,6 +198,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# take screenshot using flameshot
+bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+Print --release exec --no-startup-id flameshot screen
+
 for_window [class=".*"] border pixel 2
 gaps inner 2px
 gaps outer 2px
