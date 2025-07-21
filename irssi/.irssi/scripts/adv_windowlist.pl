@@ -1953,7 +1953,7 @@ Irssi::signal_register({
     set 'display_nokey_visible' => '%2$N${cumode_space}$H$C$S',
     set 'display_key_visible'	=> '%2$Q${cumode_space}$H$C$S',
     set 'display_nokey_active'	=> '%1$N${cumode_space}$H$C$S',
-    set 'display_key_active'	=> '%1$Q${cumode_space}$H$C$S',
+    set 'display_key_active'	=> '%1%4%k$Q${cumode_space}$H$C$S',
     set 'display_header'	=> '%8$C|${N}',
     set 'name_display'		=> '$0',
     set 'separator'		=> ' ',
