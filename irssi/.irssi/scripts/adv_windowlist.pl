@@ -1959,7 +1959,8 @@ Irssi::signal_register({
     set 'separator'		=> ' ',
     set 'separator2'		=> '',
     set 'abbrev_chars'		=> "~\x{301c}",
-    set 'viewer_item_bg'	=> sb_format_expand('{sb_background}'),
+    # set 'viewer_item_bg'	=> sb_format_expand('{sb_background}'),
+    set 'viewer_item_bg'	=> '',
     set 'title'			=> '\V'.setc().'\:',
    ]);
 }
