@@ -159,7 +159,7 @@ chatnets = {
 channels = (
   { name = "#raspberrypi"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#neovim"; chatnet = "liberachat"; autojoin = "yes"; },
-  { name = "#osdev"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#osdev"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#raspberrypi"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#u-boot"; chatnet = "liberachat"; autojoin = "yes"; },
   { name = "#wireguard"; chatnet = "liberachat"; autojoin = "yes"; },
