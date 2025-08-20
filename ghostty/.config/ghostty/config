@@ -19,6 +19,7 @@
 # ==========================
 # # The config file consists of simple key-value pairs,
 # # separated by equals signs.
+font-family = Maple Mono SemiBold
 font-family = RecMonoSmCasual Nerd Font Mono
 font-family = RecMonoLinear Nerd Font Mono
 font-family = MonacoLigaturized Nerd Font Mono
