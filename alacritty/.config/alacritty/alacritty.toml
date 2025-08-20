@@ -12,10 +12,10 @@ offset.y = 0 # For line spacing (default: 0)
 
 [font.normal]
 # family = "CodeNewRoman Nerd Font Mono"
-# family = "Maple Mono NF"
-family = "MonacoLigaturized Nerd Font Mono"
+family = "Maple Mono"
+# family = "MonacoLigaturized Nerd Font Mono"
 # family = "RecMonoCasualNerdFontMono Nerd Font"
-style = "Regular"
+style = "SemiBold"
 
 [mouse]
 hide_when_typing = true
