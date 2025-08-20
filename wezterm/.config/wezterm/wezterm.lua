@@ -3,6 +3,8 @@ local config = wezterm.config_builder()
 
 config.default_prog = { '/bin/bash' }
 
+config.freetype_load_flags = 'NO_HINTING'
+
 config.font_size = 12
 config.font = wezterm.font('FiraCode Nerd Font Mono Ret')
 config.font = wezterm.font('CodeNewRoman Nerd Font Mono')
