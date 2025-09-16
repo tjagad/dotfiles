@@ -20,6 +20,8 @@ config.font = wezterm.font('JuliaMono')
 config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'DemiBold', stretch = 'Normal' })
 config.font = wezterm.font_with_fallback {
   { family = 'Maple Mono', weight = 'DemiBold', stretch = 'Normal' },
+  -- { family = 'MonacoLigaturized Nerd Font Mono', weight = 'Regular' },
+  -- { family = 'CodeNewRoman Nerd Font Mono', weight='Regular', stretch = 'Normal' },
   { family = 'Symbols Nerd Font Mono', weight = 'Regular', stretch = 'Normal' }
 }
 config.enable_tab_bar = false
