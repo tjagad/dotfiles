@@ -206,6 +206,9 @@ for_window [class=".*"] border pixel 2
 gaps inner 2px
 gaps outer 2px
 
+# Run autocutsel to synchronize clipboard and selection
+exec --no-startup-id autocutsel -fork
+
 exec_always --no-startup-id picom
 exec_always --no-startup-id redshift -m randr -P -O 3500
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
