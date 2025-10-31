@@ -56,8 +56,14 @@ set markers = no # don't put '+' at the beginning of wrapped lines
 set pager_index_lines = 10 # how large is the index window?
 set pager_context = 5
 set sort = "threads"
-set sort_aux = "last-date-received"
-# set sort_aux = "subject"
+# Sort top-level threads by subject
+set sort_thread_groups = subject
+# set sort_aux = "last-date-received"
+# Sort messages within a thread (auxiliary sort) by date
+set sort_aux = date
+# Sort messages within a thread (auxiliary sort) by subject
+set sort_aux = "subject"
+
 set sort_browser = "reverse-date" # showing mbox list default to newest first
 #neomutt: set use_threads=threads sort=last-date sort_aux=date
 #unset resolve
