@@ -22,6 +22,11 @@ config.font = wezterm.font_with_fallback {
   { family = 'Maple Mono', weight = 'DemiBold', stretch = 'Normal' },
   -- { family = 'MonacoLigaturized Nerd Font Mono', weight = 'Regular' },
   -- { family = 'CodeNewRoman Nerd Font Mono', weight='Regular', stretch = 'Normal' },
+  -- { family = 'RecMonoCasual Nerd Font Mono', weight='Regular', stretch = 'Normal' },
+  -- { family = 'RecMonoSmCasual Nerd Font Mono', weight='Regular', stretch = 'Normal' },
+  -- { family = 'RecMonoLinear Nerd Font Mono', weight='Regular', stretch = 'Normal' },
+  -- { family = 'VictorMono Nerd Font Mono', weight='DemiBold', stretch = 'Normal' },
+  -- { family = 'JetBrainsMono Nerd Font Mono', weight='DemiBold', stretch = 'Normal' },
   { family = 'Symbols Nerd Font Mono', weight = 'Regular', stretch = 'Normal' }
 }
 config.enable_tab_bar = false
