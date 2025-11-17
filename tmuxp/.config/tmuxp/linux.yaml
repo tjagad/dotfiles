@@ -1,0 +1,32 @@
+session_name: linux
+windows:
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/bare/linux.git
+  window_name: bare
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux-x86
+  window_name: x86-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux-x86
+  window_name: x86-build
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux-arm64/
+  window_name: arm64-vi
+- options: {}
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad/projects/repos/linux-arm64/
+  window_name: arm64-build
