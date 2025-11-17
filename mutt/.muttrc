@@ -50,6 +50,8 @@ unignore Subject:
 unignore X-Newsreader:
 hdr_order Date From To Cc Bcc X-Mailer X-Operating-System Subject
 
+set date_format="%Y-%m-%d"
+set index_format="%-4C %Z %D %-15.15L %s"
 
 # For better looks
 set markers = no # don't put '+' at the beginning of wrapped lines
