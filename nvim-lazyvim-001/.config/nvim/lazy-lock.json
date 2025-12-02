@@ -1,7 +1,7 @@
 {
   "CopilotChat.nvim": { "branch": "main", "commit": "df5376c132382dd47e3e552612940cbf25b3580c" },
   "LazyVim": { "branch": "main", "commit": "28db03f958d58dfff3c647ce28fdc1cb88ac158d" },
-  "SchemaStore.nvim": { "branch": "main", "commit": "5f2299987a1937612c910f00db39156bab6a6b35" },
+  "SchemaStore.nvim": { "branch": "main", "commit": "e9c00ea7813006dfa29f35c174f83f0184d45a93" },
   "blink-copilot": { "branch": "main", "commit": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39" },
   "blink.cmp": { "branch": "main", "commit": "b19413d214068f316c78978b08264ed1c41830ec" },
   "bufferline.nvim": { "branch": "main", "commit": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3" },
@@ -9,7 +9,7 @@
   "clangd_extensions.nvim": { "branch": "main", "commit": "b67cc417d9020fb4b83d46662351b4d16894905e" },
   "cmake-tools.nvim": { "branch": "master", "commit": "87944a5d79b4da7458145d7476d5336557e11911" },
   "conform.nvim": { "branch": "master", "commit": "4993e07fac6679d0a5005aa7499e0bad2bd39f19" },
-  "copilot.lua": { "branch": "master", "commit": "4383e05a47493d7ff77b058c0548129eb38ec7fb" },
+  "copilot.lua": { "branch": "master", "commit": "881f99b827d65b41f522eecc21b112cf518028ac" },
   "crates.nvim": { "branch": "main", "commit": "ac9fa498a9edb96dc3056724ff69d5f40b898453" },
   "dial.nvim": { "branch": "master", "commit": "f97c0c7fa7d5111bc04a91d0f693900fb2d95861" },
   "dropbar.nvim": { "branch": "master", "commit": "ce202248134e3949aac375fd66c28e5207785b10" },
@@ -28,7 +28,7 @@
   "lsp_signature.nvim": { "branch": "master", "commit": "7d3bb0a641f516f1c7fd2e47852580dadbd7a430" },
   "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
-  "mason-lspconfig.nvim": { "branch": "main", "commit": "7d527c76c43f46294de9c19d39c5a86317809b4b" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "0b9bb925c000ae649ff7e7149c8cd00031f4b539" },
   "mason.nvim": { "branch": "main", "commit": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800" },
   "mini.ai": { "branch": "main", "commit": "bfb26d9072670c3aaefab0f53024b2f3729c8083" },
   "mini.files": { "branch": "main", "commit": "26baa6215c2e5c40ba7fe82685d827fe8e5c68c8" },
@@ -47,8 +47,8 @@
   "nvim-lspconfig": { "branch": "master", "commit": "effe4bf2e1afb881ea67291c648b68dd3dfc927a" },
   "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
   "nvim-toggler": { "branch": "main", "commit": "467808600882fd6c9e33b9dbc4889b1b80cfd917" },
-  "nvim-treesitter": { "branch": "main", "commit": "17885756e63df73ed90db62e4630f744ceda6514" },
-  "nvim-treesitter-textobjects": { "branch": "main", "commit": "63c4dce4a56312ef1bdeafd16bdefa008fcc950a" },
+  "nvim-treesitter": { "branch": "main", "commit": "00c906abb9550e72bc0c640545b5499b9525bb40" },
+  "nvim-treesitter-textobjects": { "branch": "main", "commit": "dfbf9596f8aa8b4bed5301647485594ff7252955" },
   "nvim-ts-autotag": { "branch": "main", "commit": "c4ca798ab95b316a768d51eaaaee48f64a4a46bc" },
   "outline.nvim": { "branch": "main", "commit": "6b62f73a6bf317531d15a7ae1b724e85485d8148" },
   "persistence.nvim": { "branch": "main", "commit": "b20b2a7887bd39c1a356980b45e03250f3dce49c" },
@@ -73,7 +73,7 @@
   "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
   "virt-column.nvim": { "branch": "master", "commit": "b87e3e0864211a32724a2ebf3be37e24e9e2fa99" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
-  "wtf.nvim": { "branch": "main", "commit": "e0b0f0f6efeb439d6ceec57492418fcc49d28a7f" },
-  "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" },
-  "yazi.nvim": { "branch": "main", "commit": "b8aac56472626a511f1d5afb33cefc088602266b" }
+  "wtf.nvim": { "branch": "main", "commit": "a50e7ae1eafe0a7c1b2871ac4185cad33bc94393" },
+  "yanky.nvim": { "branch": "main", "commit": "04fc42b94305d94948c9c197f679336668af3292" },
+  "yazi.nvim": { "branch": "main", "commit": "7ffb707ab34d425486eee0ae195546c25e05bf42" }
 }
