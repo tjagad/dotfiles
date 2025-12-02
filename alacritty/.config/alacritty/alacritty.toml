@@ -14,7 +14,8 @@ offset.y = 0 # For line spacing (default: 0)
 # family = "CodeNewRoman Nerd Font Mono"
 family = "Maple Mono NF"
 # family = "MonacoLigaturized Nerd Font Mono"
-# family = "RecMonoCasualNerdFontMono Nerd Font"
+# family = "RecMonoLinear Nerd Font Mono"
+# family = "RecMonoCasual Nerd Font Mono"
 style = "SemiBold"
 
 [mouse]
