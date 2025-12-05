@@ -17,10 +17,9 @@ mouse:
 
 font:
   normal:
-    family: "CodeNewRoman Nerd Font Mono"
-    # family: "Maple Mono NF"
+    # family: "CodeNewRoman Nerd Font Mono"
+    family: "Maple Mono NF"
     style: "Regular"
-  size: 13.0
 
 scrolling:
   history: 10000
@@ -34,4 +33,5 @@ env:
   TERM: xterm-256color
 
 import:
+  - ~/.config/alacritty/size.yml
   - ~/.config/alacritty/catppuccin-mocha.yml

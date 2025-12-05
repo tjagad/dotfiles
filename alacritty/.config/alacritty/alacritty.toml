@@ -6,7 +6,6 @@ unfocused_hollow = true
 TERM = "xterm-256color"
 
 [font]
-size = 12.0
 offset.x = 0 # For letter spacing (default: 0)
 offset.y = 0 # For line spacing (default: 0)
 
@@ -39,4 +38,8 @@ y = 5
 
 [general]
 live_config_reload = true
-import = ["/home/tjagad/.config/alacritty/catppuccin-mocha.toml"]
+
+import = [
+  "/home/tjagad/.config/alacritty/size.toml",
+  "/home/tjagad/.config/alacritty/catppuccin-mocha.toml",
+]
