@@ -11,6 +11,7 @@ irssi/.irssi/logs/*
 
 bin/.local/bin/ghostty
 bin/.local/bin/pynvim-python
+bin/.local/bin/repo
 
 alacritty/.config/alacritty/size.yml
 alacritty/.config/alacritty/size.toml
