@@ -10,6 +10,7 @@ tmux/.config/tmux/plugins/tmux-copycat/
 irssi/.irssi/logs/*
 
 bin/.local/bin/ghostty
+bin/.local/bin/pynvim-python
 
 alacritty/.config/alacritty/size.yml
 alacritty/.config/alacritty/size.toml
