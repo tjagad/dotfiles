@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 #vncserver -localhost no -depth 24 -geometry 1920x2560 :3
 vncserver -localhost no -depth 24 -geometry 1912x1010 :2
