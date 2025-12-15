@@ -67,7 +67,7 @@ exec swayidle -w \
 exec gammastep -O 3500
 exec_always ~/.config/sway/scripts/monitor-restore.sh
 exec wl-paste --watch cliphist store
-exec_always "pgrep -x mako || mako"
+exec_always "pgrep -x swayosd-server || swayosd-server"
 exec nm-applet --indicator
 
 ### Appearance
@@ -278,14 +278,14 @@ bindsym $mod+r mode "resize"
 # Media and function keys:
 #
     # Audio controls with notifications
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 "Volume" "$(pactl get-sink-mute @DEFAULT_SINK@)"
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume" "$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print $5}')"
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume" "$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print $5}')"
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && notify-send -t 1000 "Microphone" "$(pactl get-source-mute @DEFAULT_SOURCE@)"
+    bindsym --locked XF86AudioMute exec swayosd-client --output-volume mute-toggle
+    bindsym --locked XF86AudioLowerVolume exec swayosd-client --output-volume lower
+    bindsym --locked XF86AudioRaiseVolume exec swayosd-client --output-volume raise
+    bindsym --locked XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 
     # Brightness controls with notifications
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send -t 1000 "Brightness" "$(brightnessctl get)"
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+ && notify-send -t 1000 "Brightness" "$(brightnessctl get)"
+    bindsym --locked XF86MonBrightnessDown exec swayosd-client --brightness lower
+    bindsym --locked XF86MonBrightnessUp exec swayosd-client --brightness raise
 
     # Screenshot keybindings
     bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
