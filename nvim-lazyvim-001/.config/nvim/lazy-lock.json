@@ -44,7 +44,7 @@
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "81e676d3203c9eb6e4c0ccf1eba1679296ef923f" },
   "nvim-lint": { "branch": "master", "commit": "ae64d6466ed92b68353122d920e314ff2c8dd0a8" },
-  "nvim-lspconfig": { "branch": "master", "commit": "f3979663c9c8cd9ad258344b9cfb5ad83cff61c1" },
+  "nvim-lspconfig": { "branch": "master", "commit": "b3a31fd3b6702de9c71c27212ffacf0f54cc3b46" },
   "nvim-nio": { "branch": "master", "commit": "21f5324bfac14e22ba26553caf69ec76ae8a7662" },
   "nvim-toggler": { "branch": "main", "commit": "467808600882fd6c9e33b9dbc4889b1b80cfd917" },
   "nvim-treesitter": { "branch": "main", "commit": "d3218d988f72ed34414959c9ccd802d393432d6e" },
@@ -75,5 +75,5 @@
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" },
   "wtf.nvim": { "branch": "main", "commit": "a50e7ae1eafe0a7c1b2871ac4185cad33bc94393" },
   "yanky.nvim": { "branch": "main", "commit": "04fc42b94305d94948c9c197f679336668af3292" },
-  "yazi.nvim": { "branch": "main", "commit": "4bdbbd763bd5dbf5eefe778024fd5b10728feb05" }
+  "yazi.nvim": { "branch": "main", "commit": "86921f8a55be91fe524e8c12bbd48ac5ab8f42c8" }
 }
