@@ -15,3 +15,5 @@ bin/.local/bin/repo
 
 alacritty/.config/alacritty/size.yml
 alacritty/.config/alacritty/size.toml
+
+sway/.config/sway/monitor-state
