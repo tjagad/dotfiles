@@ -8,56 +8,103 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+
+# Font for window titles
+font pango:Cantarell 12
+
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred terminal emulator
-set $term wezterm
+set $term alacritty
+
 # Your preferred application launcher
-set $menu wmenu-run
+set $menu wofi --show drun
+
+include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# This is commented in Debian, because the Sway wallpaper files are in a separate
-# package `sway-backgrounds`. Installing this package drops a config file to
-# /etc/sway/config.d/
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-### Idle configuration
-#
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
+# Monitor configurations
+bindsym $mod+F1 exec ~/.config/sway/scripts/monitor-right.sh
+bindsym $mod+F2 exec ~/.config/sway/scripts/monitor-left.sh
+bindsym $mod+F3 exec ~/.config/sway/scripts/monitor-laptop.sh
 
 ### Input configuration
 #
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+
+# Touchpad configuration
+input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+# Touchpad gestures
+bindgesture swipe:right workspace prev
+bindgesture swipe:left  workspace next
+
+### Idle configuration
+#
+# This will lock your screen after 2 minutes of inactivity, then turn off
+# your displays after 3 minutes, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+exec swayidle -w \
+         timeout 120 'swaylock -f -c 000000' \
+         timeout 180 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+### Autostart applications
+exec gammastep -O 3500
+exec_always ~/.config/sway/scripts/monitor-restore.sh
+exec wl-paste --watch cliphist store
+exec_always "pgrep -x mako || mako"
+
+### Appearance
+#
+# Window borders and gaps
+default_border pixel 2
+gaps inner 2
+gaps outer 2
+smart_gaps on
+
+# Window colors - Catppuccin Mocha
+#                       border  backgr. text    indicator child_border
+client.focused          #89b4fa #1e1e2e #cdd6f4 #89b4fa   #89b4fa
+client.focused_inactive #6c7086 #1e1e2e #cdd6f4 #6c7086   #6c7086
+client.unfocused        #45475a #1e1e2e #bac2de #45475a   #45475a
+client.urgent           #f38ba8 #1e1e2e #cdd6f4 #f38ba8   #f38ba8
+client.placeholder      #1e1e2e #1e1e2e #cdd6f4 #1e1e2e   #1e1e2e
+client.background       #1e1e2e
+
+### Window rules
+#
+# Remove title bars from all windows
+for_window [app_id=".*"] border pixel 1
+
+# Focus newly opened windows
+for_window [app_id=.*] focus
+
+# Inhibit idle for fullscreen windows
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
+
+# Floating window rules
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="dialog"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [app_id="pavucontrol"] floating enable
+for_window [app_id=".*calculator.*"] floating enable
+for_window [title=".*Picture-in-Picture.*"] floating enable, sticky enable
 
 ### Key bindings
 #
@@ -72,6 +119,12 @@ set $menu wmenu-run
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Clipboard history
+    bindsym $mod+Shift+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+
+    # Window switcher (Alt+Tab style)
+    bindsym $mod+Tab exec swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.type == "con" or .type == "floating_con") | select(.app_id != null) | "\(.id) \(.app_id): \(.name)"' | wofi --dmenu | awk '{print $1}' | xargs -I{} swaymsg '[con_id={}] focus'
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -82,16 +135,23 @@ set $menu wmenu-run
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # Restart sway inplace
+    bindsym $mod+Shift+r reload
+
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
     # Move your focus around
     bindsym $mod+$left focus left
+    bindsym $mod+bracketleft focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
+    bindsym $mod+bracketright focus right
+
     # Or use $mod+[up|down|left|right]
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
@@ -103,14 +163,22 @@ set $menu wmenu-run
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
+
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
+    # Workspace auto back-and-forth
+    workspace_auto_back_and_forth yes
+
+    # Focus wrapping
+    focus_wrapping yes
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -122,6 +190,7 @@ set $menu wmenu-run
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -133,8 +202,11 @@ set $menu wmenu-run
     bindsym $mod+Shift+8 move container to workspace number 8
     bindsym $mod+Shift+9 move container to workspace number 9
     bindsym $mod+Shift+0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
+
+    # Move workspace between outputs
+    bindsym $mod+Shift+period move workspace to output right
+    bindsym $mod+Shift+comma move workspace to output left
+
 #
 # Layout stuff:
 #
@@ -150,7 +222,7 @@ set $menu wmenu-run
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+f fullscreen toggle
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
@@ -160,6 +232,7 @@ set $menu wmenu-run
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
 #
 # Scratchpad:
 #
@@ -172,6 +245,7 @@ set $menu wmenu-run
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
 #
 # Resizing containers:
 #
@@ -180,53 +254,66 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 5 px or 5 ppt
+    bindsym $down resize grow height 5 px or 5 ppt
+    bindsym $up resize shrink height 5 px or 5 ppt
+    bindsym $right resize grow width 5 px or 5 ppt
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 5 px or 5 ppt
+    bindsym Down resize grow height 5 px or 5 ppt
+    bindsym Up resize shrink height 5 px or 5 ppt
+    bindsym Right resize grow width 5 px or 5 ppt
 
     # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+
 #
-# Utilities:
+# Media and function keys:
 #
-    # Special keys to adjust volume via PulseAudio
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle
-    # Special keys to adjust brightness via brightnessctl
-    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 2%-
-    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 2%+
-    # Special key to take a screenshot with grim
-    bindsym Print exec grim
+    # Audio controls with notifications
+    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 "Volume" "$(pactl get-sink-mute @DEFAULT_SINK@)"
+    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 "Volume" "$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print $5}')"
+    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 "Volume" "$(pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print $5}')"
+    bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && notify-send -t 1000 "Microphone" "$(pactl get-source-mute @DEFAULT_SOURCE@)"
+
+    # Brightness controls with notifications
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- && notify-send -t 1000 "Brightness" "$(brightnessctl get)"
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+ && notify-send -t 1000 "Brightness" "$(brightnessctl get)"
+
+    # Screenshot keybindings
+    bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+    bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
-    # position top
+    position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-    #
-    # colors {
-    #     statusline #ffffff
-    #     background #323232
-    #     inactive_workspace #32323200 #32323200 #5c5c5c
-    # }
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+    colors {
+        # Catppuccin Mocha theme
+        background #1e1e2e
+        statusline #cdd6f4
+        separator  #6c7086
+
+        # State             border  background text
+        focused_workspace   #89b4fa #89b4fa    #1e1e2e
+        active_workspace    #6c7086 #6c7086    #cdd6f4
+        inactive_workspace  #45475a #1e1e2e    #cdd6f4
+        urgent_workspace    #f38ba8 #f38ba8    #1e1e2e
+        binding_mode        #f9e2af #f9e2af    #1e1e2e
+    }
 }
 
 include $HOME/.config/sway/config.d/*
