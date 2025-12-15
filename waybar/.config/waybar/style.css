@@ -1,3 +1,4 @@
+/* Catppuccin Mocha Colors */
 @define-color rosewater #f5e0dc;
 @define-color flamingo #f2cdcd;
 @define-color pink #f5c2e7;
@@ -24,3 +25,256 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
+
+* {
+    font-family: "Maple Mono NFMono", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(30, 30, 46, 0.85);
+    color: @text;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    border-radius: 0;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background: @surface0;
+    color: @text;
+    border-radius: 8px;
+    margin: 2px 2px;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @text;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    background: @peach;
+    color: @crust;
+    font-weight: 700;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @crust;
+}
+
+#window,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd,
+#power-profiles-daemon,
+#keyboard-state,
+#language {
+    padding: 0 10px;
+    margin: 4px 2px;
+    background: @surface0;
+    color: @text;
+    border-radius: 8px;
+}
+
+#window {
+    background: transparent;
+    font-weight: 600;
+}
+
+#workspaces,
+#mode,
+#scratchpad {
+    background: transparent;
+}
+
+/* Right side modules with accent colors */
+#clock {
+    background: @blue;
+    color: @crust;
+    font-weight: 700;
+}
+
+#battery {
+    background: @green;
+    color: @crust;
+}
+
+#battery.charging, #battery.plugged {
+    background: @teal;
+    color: @crust;
+}
+
+#battery.warning:not(.charging) {
+    background: @yellow;
+    color: @crust;
+}
+
+#battery.critical:not(.charging) {
+    background: @red;
+    color: @crust;
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0.5;
+    }
+}
+
+#cpu {
+    background: @mauve;
+    color: @crust;
+}
+
+#memory {
+    background: @pink;
+    color: @crust;
+}
+
+#temperature {
+    background: @peach;
+    color: @crust;
+}
+
+#temperature.critical {
+    background: @red;
+    color: @crust;
+    animation: blink 0.5s linear infinite;
+}
+
+#network {
+    background: @sapphire;
+    color: @crust;
+}
+
+#network.disconnected {
+    background: @overlay0;
+    color: @text;
+}
+
+#pulseaudio {
+    background: @lavender;
+    color: @crust;
+}
+
+#pulseaudio.muted {
+    background: @overlay0;
+    color: @text;
+}
+
+#backlight {
+    background: @yellow;
+    color: @crust;
+}
+
+#idle_inhibitor {
+    background: @surface0;
+    color: @text;
+}
+
+#idle_inhibitor.activated {
+    background: @green;
+    color: @crust;
+}
+
+#power-profiles-daemon {
+    background: @sky;
+    color: @crust;
+}
+
+#tray {
+    background: @surface0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @red;
+}
+
+#mpd {
+    background: @green;
+    color: @crust;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+    background: @overlay0;
+    color: @text;
+}
+
+#mode {
+    background: @red;
+    color: @crust;
+    font-weight: 700;
+    padding: 0 12px;
+    border-radius: 8px;
+}
+
+#scratchpad {
+    background: @peach;
+    color: @crust;
+    padding: 0 12px;
+    border-radius: 8px;
+}
+
+#scratchpad.empty {
+    background: transparent;
+}
+
+#keyboard-state {
+    background: @surface0;
+    padding: 0 8px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 4px;
+}
+
+#keyboard-state > label.locked {
+    background: @red;
+    color: @crust;
+    border-radius: 4px;
+}
+
+#language {
+    background: @teal;
+    color: @crust;
+}
+
+#custom-power {
+    background: @red;
+    color: @crust;
+    border-radius: 8px;
+    padding: 0 10px;
+    margin: 4px 4px 4px 2px;
+    font-size: 14px;
+}
