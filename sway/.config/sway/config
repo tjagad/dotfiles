@@ -34,6 +34,7 @@ include /etc/sway/config-vars.d/*
 bindsym $mod+F1 exec ~/.config/sway/scripts/monitor-right.sh
 bindsym $mod+F2 exec ~/.config/sway/scripts/monitor-left.sh
 bindsym $mod+F3 exec ~/.config/sway/scripts/monitor-laptop.sh
+bindsym $mod+p exec ~/.config/sway/scripts/monitor-toggle.sh
 
 ### Input configuration
 #
