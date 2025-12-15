@@ -11,26 +11,20 @@
   "modules-left": [
       "sway/workspaces",
       "sway/mode",
-      "sway/scratchpad",
-      "custom/media"
+      "sway/scratchpad"
   ],
   "modules-center": [
       "sway/window"
   ],
   "modules-right": [
-      "mpd",
       "idle_inhibitor",
       "pulseaudio",
       "network",
-      "power-profiles-daemon",
       "cpu",
       "memory",
       "temperature",
       "backlight",
-      "keyboard-state",
-      "sway/language",
       "battery",
-      "battery#bat2",
       "clock",
       "tray",
       "custom/power"
@@ -75,32 +69,6 @@
   // ========================================
   // Media & Audio Modules
   // ========================================
-  "mpd": {
-      "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-      "format-disconnected": "Disconnected ",
-      "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-      "unknown-tag": "N/A",
-      "interval": 5,
-      "consume-icons": {
-          "on": " "
-      },
-      "random-icons": {
-          "off": "<span color=\"#f53c3c\"></span> ",
-          "on": " "
-      },
-      "repeat-icons": {
-          "on": " "
-      },
-      "single-icons": {
-          "on": "1 "
-      },
-      "state-icons": {
-          "paused": "",
-          "playing": ""
-      },
-      "tooltip-format": "MPD (connected)",
-      "tooltip-format-disconnected": "MPD (disconnected)"
-  },
   "pulseaudio": {
       "format": "{volume}% {icon} {format_source}",
       "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -150,17 +118,6 @@
           ""
       ]
   },
-  "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-          "default": "",
-          "performance": "",
-          "balanced": "",
-          "power-saver": ""
-      }
-  },
 
   // ========================================
   // Hardware Modules
@@ -197,18 +154,6 @@
           ""
       ]
   },
-  "battery#bat2": {
-      "bat": "BAT2"
-  },
-  "keyboard-state": {
-      "numlock": true,
-      "capslock": true,
-      "format": "{name} {icon}",
-      "format-icons": {
-          "locked": "",
-          "unlocked": ""
-      }
-  },
 
   // ========================================
   // Network & Connectivity
@@ -236,17 +181,6 @@
   // ========================================
   // Custom Modules
   // ========================================
-  "custom/media": {
-      "format": "{icon} {text}",
-      "return-type": "json",
-      "max-length": 40,
-      "format-icons": {
-          "spotify": "",
-          "default": "🎜"
-      },
-      "escape": true,
-      "exec": "/usr/share/waybar/custom_modules/mediaplayer.py 2> /dev/null"
-  },
   "custom/power": {
       "format": "⏻",
       "tooltip": false,
