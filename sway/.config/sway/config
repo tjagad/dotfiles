@@ -68,6 +68,7 @@ exec gammastep -O 3500
 exec_always ~/.config/sway/scripts/monitor-restore.sh
 exec wl-paste --watch cliphist store
 exec_always "pgrep -x swayosd-server || swayosd-server"
+exec swaync
 exec nm-applet --indicator
 
 ### Appearance
@@ -123,6 +124,9 @@ for_window [title=".*Picture-in-Picture.*"] floating enable, sticky enable
 
     # Clipboard history
     bindsym $mod+Shift+v exec cliphist list | wofi --dmenu | cliphist decode | wl-copy
+
+    # Notification center
+    bindsym $mod+n exec swaync-client -t
 
     # Window switcher (Alt+Tab style)
     bindsym $mod+Tab exec swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.type == "con" or .type == "floating_con") | select(.app_id != null) | "\(.id) \(.app_id): \(.name)"' | wofi --dmenu | awk '{print $1}' | xargs -I{} swaymsg '[con_id={}] focus'
