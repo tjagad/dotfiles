@@ -71,6 +71,8 @@ exec swayosd-server
 exec swaync
 exec nm-applet --indicator
 
+exec telegram
+
 ### Appearance
 #
 # Window borders and gaps
