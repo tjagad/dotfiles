@@ -71,7 +71,7 @@ exec swayosd-server
 exec swaync
 exec nm-applet --indicator
 
-exec telegram
+exec telegram -startintray
 
 ### Appearance
 #
