@@ -64,7 +64,7 @@ window#waybar.hidden {
     box-shadow: none;
 }
 
-#workspaces button.active {
+#workspaces button.focused {
     background: @peach;
     color: @crust;
     font-weight: 700;
