@@ -56,9 +56,9 @@ bindgesture swipe:left  workspace next
 # your displays after 3 minutes, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 exec swayidle -w \
-         timeout 120 'swaylock -f -c 000000' \
+         timeout 120 'swaylock' \
          timeout 180 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock'
 
 ### Autostart applications
 exec gammastep -O 3500
@@ -129,6 +129,9 @@ for_window [title=".*Picture-in-Picture.*"] floating enable, sticky enable
 
     # Window switcher (Alt+Tab style)
     bindsym $mod+Tab exec swaymsg -t get_tree | jq -r '.. | select(.type?) | select(.type == "con" or .type == "floating_con") | select(.app_id != null) | "\(.id) \(.app_id): \(.name)"' | wofi --dmenu | awk '{print $1}' | xargs -I{} swaymsg '[con_id={}] focus'
+
+    # Screenlock
+    bindsym $mod+period exec swaylock
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
