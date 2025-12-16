@@ -67,7 +67,7 @@ exec swayidle -w \
 exec gammastep -O 3500
 exec_always ~/.config/sway/scripts/monitor-restore.sh
 exec wl-paste --watch cliphist store
-exec_always "pgrep -x swayosd-server || swayosd-server"
+exec swayosd-server
 exec swaync
 exec nm-applet --indicator
 
