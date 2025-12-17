@@ -32,4 +32,4 @@ output eDP-1 enable pos ${EXTERNAL_WIDTH} 0; workspace 1; \
 move workspace to output eDP-1"
 echo "left" > ~/.config/sway/monitor-state
 
-notify_info "Monitor Setup" "External monitor to the right" 2000 "video-display"
+notify_info "Monitor Setup" "External monitor to the left" 2000 "video-display"
