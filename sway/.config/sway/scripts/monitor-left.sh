@@ -11,14 +11,14 @@ OUTPUTS=$(swaymsg -t get_outputs -r)
 if ! echo "$OUTPUTS" | \
     jq -e '.[] | select(.name == "HDMI-A-1")' > /dev/null; then
     notify_error "Monitor Setup" \
-        "External monitor HDMI-A-1 not found"
+        "External monitor HDMI-A-1 not found" 5000 "dialog-error"
     exit 1
 fi
 
 # Check if laptop display (eDP-1) exists
 if ! echo "$OUTPUTS" | \
     jq -e '.[] | select(.name == "eDP-1")' > /dev/null; then
-    notify_error "Monitor Setup" "Laptop display eDP-1 not found"
+    notify_error "Monitor Setup" "Laptop display eDP-1 not found" 5000 "dialog-error"
     exit 1
 fi
 
@@ -32,4 +32,4 @@ output eDP-1 enable pos ${EXTERNAL_WIDTH} 0; workspace 1; \
 move workspace to output eDP-1"
 echo "left" > ~/.config/sway/monitor-state
 
-notify_info "Monitor Setup" "External monitor to the right"
+notify_info "Monitor Setup" "External monitor to the right" 2000 "video-display"

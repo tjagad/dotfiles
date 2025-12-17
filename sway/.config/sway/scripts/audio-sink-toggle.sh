@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Source notification library
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/notify.sh"
@@ -5,7 +7,7 @@ source "$SCRIPT_DIR/lib/notify.sh"
 # Check if wpctl is installed
 if ! command -v wpctl &> /dev/null; then
     notify_error "Audio Sink Toggle" \
-        "wpctl not found! Please install wireplumber."
+        "wpctl not found! Please install wireplumber." 5000 "dialog-error"
     echo "Error: wpctl not found. Install wireplumber." >&2
     exit 1
 fi
@@ -27,7 +29,7 @@ current_sink=$(wpctl status | \
 # Exit if no sinks found or less than 2 sinks
 if [ ${#sinks[@]} -lt 2 ]; then
     notify_info "Audio Sink" \
-        "Need at least 2 audio sinks to toggle"
+        "Need at least 2 audio sinks to toggle" 2000 "audio-card"
     exit 1
 fi
 
@@ -55,4 +57,4 @@ sink_name=$(wpctl status | \
     sed -E "s/^\s*│\s*\*?\s*${next_sink}\.\s*//; s/\s*\[.*\]\s*$//")
 
 # Show notification
-notify_info "Audio Sink" "Switched to: $sink_name"
+notify_info "Audio Sink" "Switched to: $sink_name" 2000 "audio-card"
