@@ -290,7 +290,7 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86AudioMicMute exec swayosd-client --input-volume mute-toggle
 
     # Toggle audio sink
-    bindsym $mod+Shift+a exec ~/.config/sway/scripts/audio-sink-toggle.sh
+    bindsym $mod+a exec $HOME/.config/sway/scripts/audio-sink-toggle.sh
 
     # Brightness controls with notifications
     bindsym --locked XF86MonBrightnessDown exec swayosd-client --brightness lower
