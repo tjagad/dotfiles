@@ -28,8 +28,7 @@ EXTERNAL_WIDTH=$(echo "$OUTPUTS" | \
 
 # Enable both outputs and position them
 swaymsg "output HDMI-A-1 enable; output HDMI-A-1 pos 0 0; \
-output eDP-1 enable pos ${EXTERNAL_WIDTH} 0; workspace 1; \
-move workspace to output eDP-1"
+output eDP-1 enable pos ${EXTERNAL_WIDTH} 0"
 echo "left" > ~/.config/sway/monitor-state
 
 notify_info "Monitor Setup" "External monitor to the left" 2000 "video-display"
