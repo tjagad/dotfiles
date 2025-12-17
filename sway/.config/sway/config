@@ -297,9 +297,9 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessUp exec swayosd-client --brightness raise
 
     # Screenshot keybindings
-    bindsym Print exec grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
-    bindsym Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
-    bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
+    bindsym Print exec sh -c 'f=~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png; grim "$f" && notify-send -i image-x-generic "Screenshot saved" "Screenshot saved to $f"'
+    bindsym Shift+Print exec sh -c 'f=~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png; grim -g "$(slurp)" "$f" && notify-send -i image-x-generic "Screenshot saved" "Screenshot saved to $f"'
+    # bindsym $mod+Print exec sh -c 'f=~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png; grim -g "$(swaymsg -t get_tree | jq -r ".. | select(.focused?) | .rect | \"\(.x),\(.y) \(.width)x\(.height)\"")" "$f" && notify-send -i image-x-generic "Screenshot saved" "Screenshot saved to $f"'
 
 #
 # Status Bar:
