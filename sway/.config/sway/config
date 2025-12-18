@@ -73,9 +73,9 @@ exec telegram -startintray
 ### Appearance
 #
 # Window borders and gaps
-default_border pixel 2
-gaps inner 2
-gaps outer 2
+default_border pixel 1
+gaps inner 1
+gaps outer 1
 smart_gaps on
 
 # Window colors - Catppuccin Mocha
