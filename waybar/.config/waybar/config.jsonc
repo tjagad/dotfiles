@@ -136,7 +136,7 @@
     "format": "{}% "
   },
   "temperature": {
-    "critical-threshold": 80,
+    "critical-threshold": 95,
     "format": "{temperatureC}°C {icon}",
     "format-icons": [
       "",
