@@ -399,6 +399,7 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "swayosd-client --output-volume lower"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "swayosd-client --output-volume mute-toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "swayosd-client --input-volume mute-toggle"; }
+    Mod+A allow-when-locked=true hotkey-overlay-title="Switch Audio Device" { spawn-sh "~/.config/niri/scripts/switch-audio-sink-next.sh"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
