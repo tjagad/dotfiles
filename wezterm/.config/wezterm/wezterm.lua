@@ -35,5 +35,6 @@ config.colors = {
   background = "#000000"
 }
 config.color_scheme = "Catppuccin Mocha"
+config.window_background_opacity = 1.0
 
 return config
