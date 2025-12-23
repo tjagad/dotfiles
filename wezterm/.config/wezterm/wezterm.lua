@@ -17,7 +17,7 @@ config.font = wezterm.font('DroidSansM Nerd Font Mono')
 config.font = wezterm.font('VictorMono Nerd Font Mono', { weight = 'DemiBold' })
 config.font = wezterm.font('JuliaMono')
 config.font = wezterm.font('JetBrainsMono Nerd Font Mono', { weight = 'DemiBold', stretch = 'Normal' })
-config.font = wezterm.font('Maple Mono NFMono', { weight = 'Medium', stretch = 'Normal' })
+config.font = wezterm.font('Maple Mono NFMono', { weight = 'DemiBold', stretch = 'Normal' })
 -- config.font = wezterm.font_with_fallback {
 --   { family = 'Maple Mono NFMono', weight = 'Medium', stretch = 'Normal' },
   -- { family = 'MonacoLigaturized Nerd Font Mono', weight = 'Regular' },
