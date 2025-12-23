@@ -39,6 +39,7 @@ window#waybar {
     transition-property: background-color;
     transition-duration: 0.5s;
     border-radius: 5px;
+    /* border: 1px solid #7fc8ff; */
 }
 
 window#waybar.hidden {
