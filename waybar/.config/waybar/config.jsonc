@@ -9,11 +9,13 @@
   // Module Layout
   // ========================================
   "modules-left": [
+      "niri/workspaces",
       "sway/workspaces",
       "sway/mode",
       "sway/scratchpad"
   ],
   "modules-center": [
+      "niri/window",
       "sway/window"
   ],
   "modules-right": [
@@ -32,6 +34,22 @@
   // ========================================
   // Sway Modules
   // ========================================
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰬺",
+      "2": "󰬻",
+      "3": "󰬼",
+      "4": "󰬽",
+      "5": "󰬾",
+      "6": "󰬿",
+      "7": "󰭀",
+      "8": "󰭁",
+      "9": "󰭂",
+      "10": "󰿩",
+      "urgent": ""
+    }
+  },
   "sway/workspaces": {
       "disable-scroll": true,
       "all-outputs": false,
@@ -63,6 +81,11 @@
       ],
       "tooltip": true,
       "tooltip-format": "{app}: {title}"
+  },
+  "niri/window": {
+    "format": "{}",
+    "separate-outputs": true,
+    "icon": true
   },
 
   // ========================================
