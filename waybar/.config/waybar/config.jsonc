@@ -4,6 +4,10 @@
   // ========================================
   "height": 24,
   "spacing": 4,
+  // "margin-top": 5,
+  // "margin-left": 5,
+  // "margin-right": 5,
+  // "margin-bottom": 5,
 
   // ========================================
   // Module Layout
