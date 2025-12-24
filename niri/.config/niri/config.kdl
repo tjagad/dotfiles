@@ -642,5 +642,6 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
+    Mod+M hotkey-overlay-title="Toggle Monitor Position" { spawn-sh "~/.config/niri/scripts/monitor-position.sh"; }
     Mod+n hotkey-overlay-title="Show notification center" { spawn-sh "swaync-client -t"; }
 }

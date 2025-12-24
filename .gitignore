@@ -17,3 +17,5 @@ alacritty/.config/alacritty/size.yml
 alacritty/.config/alacritty/size.toml
 
 sway/.config/sway/monitor-state
+
+niri/.config/niri/monitor-state
