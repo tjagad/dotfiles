@@ -23,3 +23,7 @@ case "$CURRENT_STATE" in
         "$SCRIPT_DIR/monitor-laptop.sh"
         ;;
 esac
+
+killall -9 gammastep 2>/dev/null
+sleep 1
+gammastep -O 3500 &
