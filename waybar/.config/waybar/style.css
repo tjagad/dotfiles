@@ -145,6 +145,7 @@ tooltip label{
 }
 #tray > .active {
 	border-bottom: 3px solid white;
+	border-bottom: none;
 }
 #tray > .needs-attention {
 	border-bottom: 3px solid @warning_color;
