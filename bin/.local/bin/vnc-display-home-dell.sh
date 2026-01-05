@@ -10,5 +10,5 @@ touch alacritty.toml
 popd >/dev/null
 
 pushd >/dev/null $HOME/.config/wezterm
-echo "return 12" > font-size.lua
+echo "return 12" > font_size.lua
 popd >/dev/null
