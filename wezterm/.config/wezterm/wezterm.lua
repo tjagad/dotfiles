@@ -5,7 +5,12 @@ config.default_prog = { '/bin/bash' }
 
 config.freetype_load_flags = 'NO_HINTING'
 
-config.font_size = 12
+local ok, font_size = pcall(require, 'font_size')
+if not ok then
+  font_size = 12
+end
+config.font_size = font_size
+
 -- config.font = wezterm.font('RecMonoLinear Nerd Font Mono', { weight = 'Light', italic = true })
 config.font = wezterm.font('FiraCode Nerd Font Mono Ret')
 config.font = wezterm.font('CodeNewRoman Nerd Font Mono')

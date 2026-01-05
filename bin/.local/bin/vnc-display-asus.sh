@@ -10,3 +10,7 @@ ln -fs hdpi-home-asus.yml size.yml
 ln -fs hdpi-home-asus.toml size.toml
 touch alacritty.toml
 popd >/dev/null
+
+pushd >/dev/null $HOME/.config/wezterm
+echo "return 13" > font-size.lua
+popd >/dev/null

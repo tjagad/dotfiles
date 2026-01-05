@@ -10,4 +10,8 @@ ln -fs fhd-home-dell.toml size.toml
 touch alacritty.toml
 popd >/dev/null
 
+pushd >/dev/null $HOME/.config/wezterm
+echo "return 12" > font-size.lua
+popd >/dev/null
+
 exit 0

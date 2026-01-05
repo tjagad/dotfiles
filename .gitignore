@@ -16,6 +16,8 @@ bin/.local/bin/repo
 alacritty/.config/alacritty/size.yml
 alacritty/.config/alacritty/size.toml
 
+wezterm/.config/wezterm/font_size.lua
+
 sway/.config/sway/monitor-state
 
 niri/.config/niri/monitor-state
