@@ -9,3 +9,5 @@ bind o any toggleOutline
 bind n any nextPage
 bind p any previousPage
 bind q any quit
+bind K any scrollUp(160)
+bind J any scrollDown(160)
