@@ -288,8 +288,7 @@ spawn-sh-at-startup "swaybg -i ~/Pictures/wallpaper-005.jpg"
 spawn-sh-at-startup "swaync"
 spawn-sh-at-startup "swayosd-server"
 spawn-at-startup "swayidle" "-w" \
-    "timeout" "120" "niri msg action power-off-monitors" \
-    "timeout" "130" "swaylock" \
+    "timeout" "120" "~/.config/niri/scripts/lock-and-off.sh" \
       "resume" "niri msg action power-on-monitors" \
     "before-sleep" "swaylock"
 
