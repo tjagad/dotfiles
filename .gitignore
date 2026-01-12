@@ -21,3 +21,5 @@ wezterm/.config/wezterm/font_size.lua
 sway/.config/sway/monitor-state
 
 niri/.config/niri/monitor-state
+
+nvim-lazyvim-001/.config/nvim/lazy-lock.json
