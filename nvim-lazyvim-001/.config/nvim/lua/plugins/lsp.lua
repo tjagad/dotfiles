@@ -9,5 +9,13 @@ return {
         current_line = true,
       },
     },
+    -- Add your servers here
+    servers = {
+      asmlsp = {
+        cmd = { "asm-lsp" },
+        filetypes = { "asm", "s", ".S" }, -- ensure .S files are recognized
+        root_dir = require("lspconfig").util.root_pattern(".asm-lsp.toml"),
+      },
+    },
   },
 }
