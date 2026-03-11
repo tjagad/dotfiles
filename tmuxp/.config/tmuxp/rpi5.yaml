@@ -1,0 +1,22 @@
+session_name: rpi5
+shell_command_before:
+  - tmux set-option @floax-session-name "rpi5-floax"
+windows:
+  - window_name: linux-vi
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: $HOME/projects/rpi/linux/
+  - window_name: linux-build
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: $HOME/projects/rpi/linux/
+  - window_name: linux-gdb
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: $HOME/projects/rpi/linux/
