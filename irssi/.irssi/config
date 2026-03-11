@@ -181,7 +181,7 @@ ignores = (
   },
   {
     level = "JOINS PARTS QUITS NICKS";
-    channels = (
+    channels = ( 
       "#neovim",
       "#osdev",
       "#raspberrypi",
