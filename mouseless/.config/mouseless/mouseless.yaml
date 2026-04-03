@@ -34,8 +34,8 @@ layers:
     # right alt key toggles arrows layer
     rightalt: toggle-layer arrows
     # switch escape with capslock
-    esc: capslock
-    capslock: esc
+    #esc: capslock
+    #capslock: esc
     # key combos are activated when both keys are pressed simultaneously
     f+d: layer mouse
     # map ctrl+h/j/k/l to arrow keys
