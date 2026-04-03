@@ -1,0 +1,93 @@
+# the keyboard devices to read from, if left empty, it reads from all keyboards
+# run `mouseless -l` to see all available devices
+devices:
+# - "Name of keyboard"
+
+devicesExclude:
+# - "Name of keyboard"
+
+# the rate at which the mouse pointer moves (in ms)
+mouseLoopInterval: 20
+
+# the default speed for mouse movement and scrolling
+baseMouseSpeed: 750.0
+baseScrollSpeed: 20.0
+
+# acceleration settings
+mouseAccelerationTime: 200.0
+mouseAccelerationCurve: 2.0
+startMouseSpeed: 0.0
+mouseDecelerationTime: 300.0
+mouseDecelerationCurve: 3.0
+
+quickTapTime: 150
+comboTime: 25
+
+layers:
+- name: initial
+  # the first layer is active at start
+  bindings:
+    # when tab is held and another key pressed, activate mouse layer
+    tab: tap-hold-next tab ; toggle-layer mouse ; 500
+    # when a is held for 300ms, activate mouse layer
+    a: tap-hold a ; toggle-layer mouse ; 300
+    # right alt key toggles arrows layer
+    rightalt: toggle-layer arrows
+    # switch escape with capslock
+    esc: capslock
+    capslock: esc
+    # key combos are activated when both keys are pressed simultaneously
+    f+d: layer mouse
+    # map ctrl+h/j/k/l to arrow keys
+    leftctrl: mod-layer leftctrl vim-arrows
+
+- name: mouse
+  passThrough: true
+  enterCommand: "notify-send 'mouse layer entered'"
+  exitCommand: "notify-send 'mouse layer exited'"
+  bindings:
+    q: layer initial
+    space: layer mouse
+    r: reload-config
+    
+    # CORRECTED VIM DIRECTIONS
+    h: move -1  0  # Left
+    j: move  0  1  # Down
+    k: move  0 -1  # Up
+    l: move  1  0  # Right
+    
+    p: scroll up
+    n: scroll down
+    
+    # Speed Modifiers
+    leftalt: speed 4.0
+    e: speed 0.3
+    capslock: speed 0.1
+    
+    # Mouse Buttons
+    f: button left
+    d: button middle
+    s: button right
+    
+    # move to the top left corner
+    k0: "exec xdotool mousemove 0 0"
+
+- name: arrows
+  passThrough: false
+  bindings:
+    e: up
+    s: left
+    d: down
+    f: right
+    q: esc
+    w: backspace
+    r: delete
+    v: enter
+    _: rightalt+_
+
+- name: vim-arrows
+  bindings:
+    h: left
+    j: down
+    k: up
+    l: right
