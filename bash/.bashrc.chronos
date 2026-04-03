@@ -3,9 +3,11 @@ export LANG=en_IN.UTF-8
 export CHRONOS_BASE=/etc/chronos
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
 
-export CARGO_HOME="$HOME/.cargo"
-export RUSTUP_HOME="$HOME/.rustup"
+source /opt/rust/rust.sh
+export CARGO_HOME=$HOME/.cargo
+export PATH=$PATH:$CARGO_HOME/bin
 
 export PATH=$HOME/.local/bin:$PATH
 
