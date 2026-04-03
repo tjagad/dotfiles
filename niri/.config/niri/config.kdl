@@ -289,7 +289,7 @@ layout {
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 spawn-sh-at-startup "gammastep -O 3500"
-spawn-sh-at-startup "swaybg -i ~/Pictures/wallpaper-005.jpg"
+spawn-sh-at-startup "swaybg -i ~/Pictures/current"
 spawn-sh-at-startup "swaync"
 spawn-sh-at-startup "swayosd-server"
 spawn-at-startup "swayidle" "-w" \
