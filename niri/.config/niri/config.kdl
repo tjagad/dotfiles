@@ -293,6 +293,7 @@ spawn-sh-at-startup "swaybg -i ~/Pictures/current"
 spawn-sh-at-startup "swaync"
 spawn-sh-at-startup "swayosd-server"
 spawn-sh-at-startup "mouseless --config ~/.config/mouseless/mouseless.yaml"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "swayidle" "-w" \
     "timeout" "120" "~/.config/niri/scripts/lock-and-off.sh" \
       "resume" "niri msg action power-on-monitors" \
