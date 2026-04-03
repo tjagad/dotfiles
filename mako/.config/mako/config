@@ -1,0 +1,32 @@
+# Global Settings
+max-history=100
+sort=-time
+
+# --- Behavior ---
+# Disappear in 3 seconds (3000 milliseconds)
+default-timeout=3000
+
+# --- Style (Catppuccin Mocha) ---
+font=Cantarell 14
+width=300
+height=110
+margin=10
+padding=15
+border-size=2
+border-radius=8
+
+# Colors
+background-color=#000000
+text-color=#cdd6f4
+border-color=#89b4fa
+progress-color=over #313244
+
+[urgency=low]
+border-color=#89b4fa
+
+[urgency=normal]
+border-color=#89b4fa
+
+[urgency=high]
+border-color=#f38ba8
+default-timeout=0
