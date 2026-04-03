@@ -49,26 +49,26 @@ layers:
     q: layer initial
     space: layer mouse
     r: reload-config
-    
+
     # CORRECTED VIM DIRECTIONS
     h: move -1  0  # Left
     j: move  0  1  # Down
     k: move  0 -1  # Up
     l: move  1  0  # Right
-    
+
     p: scroll up
     n: scroll down
-    
+
     # Speed Modifiers
     leftalt: speed 4.0
     e: speed 0.3
     capslock: speed 0.1
-    
+
     # Mouse Buttons
     f: button left
     d: button middle
     s: button right
-    
+
     # move to the top left corner
     k0: "exec xdotool mousemove 0 0"
 
