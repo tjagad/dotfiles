@@ -43,8 +43,8 @@ layers:
 
 - name: mouse
   passThrough: true
-  enterCommand: "notify-send 'mouse layer entered'"
-  exitCommand: "notify-send 'mouse layer exited'"
+  enterCommand: "notify-send -i 'input-keyboard' '󰍾 Mouseless' ' Mouse Layer Activated'"
+  exitCommand: "notify-send -i 'input-keyboard' '󰍾 Mouseless' ' Mouse Layer Deactivated'"
   bindings:
     q: layer initial
     space: layer mouse
@@ -68,6 +68,9 @@ layers:
     f: button left
     d: button middle
     s: button right
+    o: button left
+    i: button middle
+    u: button right
 
     # move to the top left corner
     k0: "exec xdotool mousemove 0 0"
