@@ -2,6 +2,11 @@
 max-history=100
 sort=-time
 
+icons=1
+icon-path=/usr/share/icons/Colloid-Dark/
+max-icon-size=32
+icon-border-radius=4
+
 # --- Behavior ---
 # Disappear in 3 seconds (3000 milliseconds)
 default-timeout=3000
