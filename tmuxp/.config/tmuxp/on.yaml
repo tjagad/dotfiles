@@ -1,0 +1,47 @@
+session_name: orb-net
+# shell_command_before:
+#   - tmux set-option @floax-session-name "mgmt-floax"
+windows:
+  - window_name:  on-sh
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/
+  - window_name:  docs-vi
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/docs/
+    focus: "true"
+  - window_name:  docs-git
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/docs/
+  - window_name:  docs-serve
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/docs/
+  - window_name:  repo
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/dev
+  - window_name:  repo-git
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/dev
+  - window_name:  repo-build
+    options: {}
+    panes:
+      - focus: "true"
+        shell_command:
+    start_directory: /home/tjagad/projects/orbital-networks/dev
