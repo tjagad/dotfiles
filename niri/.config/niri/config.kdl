@@ -288,6 +288,12 @@ layout {
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+// clipboard management/sync
+// 1. Capture history from CLIPBOARD (Ctrl+C)
+spawn-sh-at-startup "wl-paste --watch cliphist store"
+// 2. Capture history from PRIMARY (Highlight)
+spawn-sh-at-startup "wl-paste --primary --watch cliphist store"
+
 spawn-sh-at-startup "gammastep -O 3500"
 spawn-sh-at-startup "swaybg -i ~/Pictures/current"
 // spawn-sh-at-startup "swaync"
@@ -651,4 +657,10 @@ binds {
 
     Mod+M hotkey-overlay-title="Toggle Monitor Position" { spawn-sh "~/.config/niri/scripts/monitor-position.sh"; }
     Mod+n hotkey-overlay-title="Show notification center" { spawn-sh "swaync-client -t"; }
+
+    //Mod+P hotkey-overlay-title="Paste from cliphist" { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+
+    Mod+P hotkey-overlay-title="Paste from cliphist" {
+      spawn "bash" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | tee >(wl-copy) | wl-copy --primary";
+    }
 }
