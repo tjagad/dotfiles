@@ -1,0 +1,11 @@
+session_name: services
+windows:
+- window_name: rsh
+  panes:
+  - focus: 'true'
+    shell_command:
+  start_directory: /home/tjagad
+- window_name: ai4bharat-proxy
+  panes:
+  - pane
+  start_directory: /home/tjagad/projects/ai4bharat-proxy
