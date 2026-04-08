@@ -9,6 +9,7 @@
   "modules-left": [
     "niri/workspaces",
     "wlr/taskbar"
+    // "cffi/niri-taskbar"
   ],
   "modules-center": [],
   "modules-right": [
@@ -30,6 +31,22 @@
     "ignore-list": [],
     "on-click": "activate",
     "all-workspaces": false,
+  },
+  "cffi/niri-taskbar": {
+    "module_path": "/usr/lib/libniri_taskbar.so",
+    "format": "{icon} {title:.17}",
+    "icon_size": 28,
+    "spacing": 3,
+    "on_click_middle": "close",
+    "tooltip_format": "{title}",
+    "ignore_list": [],
+    "on_click": "activate",
+    "all_workspaces": false,
+    "show_all_outputs": false,
+    "notifications": {
+      "timeout": 5,
+      "format": "{icon} {body}"
+    }
   },
   "tray": {
     "icon-size": 16,
