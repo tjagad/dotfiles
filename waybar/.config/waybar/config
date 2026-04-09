@@ -30,7 +30,10 @@
     "tooltip-format": "{title}",
     "ignore-list": [],
     "on-click": "activate",
-    "all-workspaces": false
+    "all-workspaces": false,
+    "all-outputs": false,
+    "sort-by-number": true,
+    "on-click": "activate"
   },
   "cffi/niri-taskbar": {
     "module_path": "/usr/lib/libniri_taskbar.so",
