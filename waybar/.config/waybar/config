@@ -107,8 +107,8 @@
     ]
   },
   "pulseaudio": {
-    "format": "<span size='large' font_family='JetBrainsMono Nerd Font Mono'>{icon}</span> {volume}%",
-    "format-bluetooth": "<span size='large' font_family='JetBrainsMono Nerd Font Mono'>{icon}</span> {volume}%",
+    "format": "<span size='xx-large' rise='-4000' font_family='Maple Mono NFMono'>{icon}</span> {volume}%",
+    "format-bluetooth": "<span size='xx-large' rise='-4000' font_family='Maple Mono NFMono'>{icon}</span> {volume}%",
     "format-bluetooth-muted": " {icon}",
     "format-muted": "",
     "format-source": "{volume}% ",
