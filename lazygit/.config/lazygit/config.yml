@@ -1,0 +1,10 @@
+git:
+  # Optional: ensures the -s (signoff) is always used even with built-in commit
+  commit:
+    signOff: true
+customCommands:
+  - key: 'v'
+    description: 'Commit using git cm alias (verbose + signoff)'
+    command: 'git cm -v'
+    context: 'files'
+    output: terminal
