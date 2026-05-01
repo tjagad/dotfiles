@@ -4,10 +4,6 @@ local config = wezterm.config_builder()
 config.default_prog = { '/bin/bash' }
 
 config.freetype_load_flags = 'NO_HINTING'
--- Rendering tweaks for softness
-config.text_gamma = 1.35
-config.text_contrast = 0.9
-config.line_height = 1.1
 
 local ok, font_size = pcall(require, 'font_size')
 if not ok then
