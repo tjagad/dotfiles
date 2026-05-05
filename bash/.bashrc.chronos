@@ -4,6 +4,7 @@ export CHRONOS_BASE=/etc/chronos
 export MANROFFOPT="-c"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export FREETYPE_PROPERTIES="cff:no-stem-darkening=0 autofitter:no-stem-darkening=0"
+export MOZ_ENABLE_WAYLAND=1
 
 source /opt/rust/rust.sh
 export CARGO_HOME=$HOME/.cargo
