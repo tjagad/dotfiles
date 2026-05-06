@@ -1,5 +1,5 @@
 /*base background color*/
-@define-color bg_main rgba(25, 25, 25, 0.9);
+@define-color bg_main rgba(25, 25, 25, 0.5);
 @define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
 
 
@@ -16,14 +16,16 @@
 /*text color for entries that are unselected */
 @define-color content_inactive rgba(255, 255, 255, 0.25);
 
+@define-color catppuccin_mocha_sky rgba(4, 165, 229, 1);
+
 * {
 	text-shadow: none;
 	box-shadow: none;
   border: none;
   border-radius: 0;
-	font-family: "Segoe UI", "Ubuntu";
+	font-family: "Inter", "Segoe UI", "Ubuntu";
   font-weight: 600;
-  font-size: 12.7px;
+  font-size: 14px;
 }
 
 window#waybar {
@@ -44,7 +46,7 @@ tooltip label{
 }
 
 #custom-os_button {
-	font-family: "JetBrainsMono Nerd Font Mono";
+	font-family: "Maple Mono NFMono";
   font-size: 24px;
 	padding-left: 12px;
 	padding-right: 20px;
@@ -70,7 +72,7 @@ tooltip label{
 #workspaces button.active {
   background: @bg_active;
   color: @content_main;
-	border-bottom: 3px solid white;
+	border-bottom: 3px solid @catppuccin_mocha_sky;
 }
 #workspaces button.focused {
   color: @bg_active;
@@ -93,17 +95,13 @@ tooltip label{
 #taskbar button {
 	min-width: 130px;
 	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-	margin-left: 2px;
-	margin-right: 2px;
-  padding-left: 8px;
-  padding-right: 8px;
   color: white;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 	border-radius: 5px;
 }
 
 #taskbar button.active {
-	border-bottom: 3px solid white;
+	border-bottom: 3px solid @catppuccin_mocha_sky;
   background: @bg_active;
 }
 
