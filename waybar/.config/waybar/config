@@ -78,6 +78,11 @@
         "min_button_width": 10,
         "max_button_width": 150,
         "max_taskbar_width": 1250
+      },
+      "HDMI-A-1": {
+        "min_button_width": 10,
+        "max_button_width": 150,
+        "max_taskbar_width": 2100
       }
     },
 
