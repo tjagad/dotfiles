@@ -283,9 +283,6 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
-//spawn-at-startup "waybar"
-
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 // clipboard management/sync
@@ -301,6 +298,9 @@ spawn-sh-at-startup "mako"
 spawn-sh-at-startup "swayosd-server"
 spawn-sh-at-startup "mouseless --config ~/.config/mouseless/mouseless.yaml"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
+// This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-sh-at-startup "waybar"
+
 spawn-at-startup "swayidle" "-w" \
     "timeout" "120" "~/.config/niri/scripts/lock-and-off.sh" \
       "resume" "niri msg action power-on-monitors" \
