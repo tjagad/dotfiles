@@ -8,8 +8,9 @@
   "passthrough": false,
   "modules-left": [
     "niri/workspaces",
-    "wlr/taskbar"
+    // "wlr/taskbar"
     // "cffi/niri-taskbar"
+    "cffi/niri_window_buttons"
   ],
   "modules-center": [],
   "modules-right": [
@@ -49,6 +50,113 @@
     "notifications": {
       "timeout": 5,
       "format": "{icon} {body}"
+    }
+  },
+  "cffi/niri_window_buttons": {
+    "module_path": "/usr/lib/libniri_window_buttons.so",
+
+    // Display
+    "only_current_workspace": true,
+    "show_window_titles": true,
+    "truncate_titles": true,
+    "allow_title_linebreaks": false,
+    "button_alignment": "left",
+    "show_tooltip": true,
+    "tooltip_delay": 200,
+
+    // Sizing
+    "icon_size": 28,
+    "icon_spacing": 3,
+    "min_button_width": 10,
+    "max_button_width": 150,
+    "scroll_arrow_left": "",
+    "scroll_arrow_right": "",
+
+    // Per-output overrides
+    "dimensions_per_output": {
+      "eDP-1": {
+        "min_button_width": 10,
+        "max_button_width": 150,
+        "max_taskbar_width": 1250
+      }
+    },
+
+    // Drag reorder
+    "drag_style": "browser",
+    "left_click_focus_on_press": true,
+    "drag_hover_focus": true,
+    "drag_hover_focus_delay": 500,
+
+    // Click actions
+    "click_actions": {
+      "left_click_unfocused": "focus-window",
+      "left_click_focused": "maximize-column",
+      "double_click": "maximize-window-to-edges",
+      "right_click_unfocused": "menu",
+      "right_click_focused": "menu",
+      "middle_click_unfocused": "close-window",
+      "middle_click_focused": "close-window",
+      "scroll_up": "move-column-left",
+      "scroll_down": "move-column-right"
+    },
+
+    // Context menu
+    "context_menu": [
+      {"label": "  Maximize Column", "action": "maximize-column"},
+      {"label": "  Maximize to Edges", "action": "maximize-window-to-edges"},
+      {"label": "  Center Column", "action": "center-window"},
+      {"label": "󰉩  Toggle Floating", "action": "toggle-window-floating"},
+      {"label": "  Move WS Up", "action": "move-window-to-workspace-up"},
+      {"label": "  Move WS Down", "action": "move-window-to-workspace-down"},
+      {"label": "  Run Script", "command": "notify-send '{app_id}'"},
+      {"label": "  Close Window", "action": "close-window"}
+    ],
+
+    // Multi-select
+    "multi_select_modifier": "shift",
+    "multi_select_menu": [
+      {"label": "  Move All Up", "action": "move-to-workspace-up"},
+      {"label": "  Move All Down", "action": "move-to-workspace-down"},
+      {"label": "  Maximize All", "action": "maximize-columns"},
+      {"label": "  Close All", "action": "close-windows"}
+    ],
+
+    // Filtering
+    "ignore_rules": [
+      {"app_id": "xpad"},
+      {"app_id": "launcher"}
+    ],
+
+    // Notifications
+    "notifications": {
+      "enabled": true,
+      "use_desktop_entry": true,
+      "use_fuzzy_matching": true,
+      "map_app_ids": {
+        "org.mozilla.firefox": "firefox"
+      }
+    },
+
+    // Audio indicator
+    "audio_indicator": {
+      "enabled": false,
+      "playing_icon": "󰕾",
+      "muted_icon": "󰖁",
+      "clickable": true
+    },
+
+    // Per-app CSS classes and click overrides
+    "apps": {
+      "signal": [
+        {"match": "\\([0-9]+\\)$", "class": "unread"}
+      ],
+      "firefox": [
+        {"match": ".*YouTube.*", "class": "youtube"},
+        {"match": ".*", "click_actions": {
+          "middle_click_unfocused": "none",
+          "middle_click_focused": "none"
+        }}
+      ]
     }
   },
   "tray": {

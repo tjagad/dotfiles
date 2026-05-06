@@ -111,6 +111,33 @@ tooltip label{
 	color: @content_main;
 }
 
+.niri-window-buttons {
+}
+
+/* Individual window buttons */
+.niri-window-buttons button {
+	border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  color: white;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+	border-radius: 5px;
+}
+
+.niri-window-buttons button:hover {
+	border-bottom: 3px solid white;
+  background: @bg_hover;
+	color: @content_main;
+}
+
+.niri-window-buttons button.focused {
+	border-bottom: 3px solid @catppuccin_mocha_sky;
+  background: @bg_active;
+}
+
+/* Style for urgent/notifying windows */
+.niri-window-buttons button.urgent {
+    background: #eb4d4b;
+}
+
 #cpu, #disk, #memory {
 	padding:3px;
 }
