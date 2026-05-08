@@ -8,6 +8,17 @@ debug {
     ignore-drm-device "/dev/dri/renderD129"
 }
 
+environment {
+    // Forces GTK to use the correct scaling protocol
+    GDK_BACKEND "wayland"
+    // Prevents XWayland apps from over-scaling on the 1080p monitor
+    XCURSOR_SIZE "24"
+    GDK_DPI_SCALE "1"
+    DISPLAY_DPI "96"
+    XFT_DPI "96"
+    FREETYPE_PROPERTIES "truetype:interpreter-version=40"
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
