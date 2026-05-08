@@ -347,9 +347,16 @@ animations {
     slowdown 1.5
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Window-Rules
+blur {
+    // Higher passes = smoother but more GPU load (default: 3)
+    passes 3
+    // How far the blur spreads (default: 3.0)
+    offset 3.5
+    // Great for OLEDs: adds a subtle film grain to stop banding
+    noise 0.02
+    // Boosts the colors of the blurred area (default: 1.5)
+    saturation 1.2
+}
 
 // by setting an empty default-column-width.
 // Work around WezTerm's initial configure bug
