@@ -25,3 +25,5 @@ niri/.config/niri/monitor-state
 niri/.config/niri/scripts/switch-audio-sink-next.sh
 
 nvim-lazyvim-001/.config/nvim/lazy-lock.json
+
+stasis/.config/stasis/stasis.rune
