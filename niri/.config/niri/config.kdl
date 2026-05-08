@@ -709,4 +709,6 @@ binds {
     Mod+P hotkey-overlay-title="Paste from cliphist" {
       spawn "bash" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | tee >(wl-copy) | wl-copy --primary";
     }
+
+    Mod+b hotkey-overlay-title="Toggle gaps and struts" { maximize-window-to-edges ; }
 }
