@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 config.default_prog = { '/bin/bash' }
 
 config.freetype_load_flags = 'NO_HINTING'
+config.freetype_render_target = 'HorizontalLcd'
 
 local ok, font_size = pcall(require, 'font_size')
 if not ok then
