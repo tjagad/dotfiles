@@ -382,6 +382,30 @@ window-rule {
     open-floating true
 }
 
+// Rule for Thunar's "Copying...", "Moving...", and "Rename" dialogs
+window-rule {
+    match app-id="^thunar$" title="^(Copying|Moving|Rename|File Operation Progress|Confirm to replace files)"
+
+    // Force them to be small and floating
+    open-floating true
+
+    // Set a reasonable fixed size so they don't stretch
+    default-column-width { fixed 500; }
+    default-window-height { fixed 200; }
+
+    // Keep them centered on your screen
+    open-focused true
+}
+
+// Optional: Bulk Rename tool (usually needs more width)
+window-rule {
+    match app-id="^thunar$" title="^Bulk Rename"
+
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
