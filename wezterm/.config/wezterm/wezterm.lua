@@ -36,9 +36,6 @@ config.font = wezterm.font('Maple Mono NFMono', { weight = 'Medium', stretch = '
 -- }
 config.enable_tab_bar = false
 
-config.colors = {
-  background = "#000000"
-}
 config.color_scheme = "Catppuccin Mocha"
 config.window_background_opacity = 1.0
 
