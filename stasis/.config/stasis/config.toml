@@ -1,0 +1,12 @@
+[[plans]]
+name = "default"
+
+[[plans.steps]]
+delay = 120
+# Triggers during normal idle
+action = "niri msg action spawn -- swaylock & niri msg action power-off-monitors"
+resume = "niri msg action power-on-monitors"
+
+[sleep]
+# Triggers specifically before the system suspends/sleeps
+lock_command = "niri msg action spawn -- swaylock & niri msg action power-off-monitors"
