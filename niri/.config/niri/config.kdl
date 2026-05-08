@@ -366,6 +366,11 @@ window-rule {
     // since this is the default config, and we want no false positives.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
     default-column-width { }
+    opacity 0.85
+    background-effect {
+        blur true
+        xray true
+    }
 }
 
 // Open the Firefox picture-in-picture player as floating by default.
