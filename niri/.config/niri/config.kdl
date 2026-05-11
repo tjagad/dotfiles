@@ -713,4 +713,6 @@ binds {
     Mod+b hotkey-overlay-title="Toggle gaps and struts" { maximize-window-to-edges ; }
 
     Mod+e hotkey-overlay-title="Open File Manager" { spawn-sh "thunar"; }
+
+    Mod+t hotkey-overlay-title="Open Telegram" { spawn-sh "telegram"; }
 }
