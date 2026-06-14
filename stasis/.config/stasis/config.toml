@@ -1,3 +1,8 @@
+# Media inhibit settings
+monitor_media = true
+ignore_remote_media = true
+inhibit_apps = ["vlc", "mpv", "/steam_app_.*/", "firefox", "chrome", "brave", "chromium", "opera", "safari"]
+
 [[plans]]
 name = "default"
 
